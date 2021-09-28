@@ -1,1 +1,22 @@
+body{
+    background-color: black;
+    color: white;
+    max-width: 320px;
+    max-height: 768px;
+}
 
+header{
+    background-color: #f45c45;
+    height : 10vh;
+    display : block;
+    text-align : center;
+    
+}
+
+
+
+h1 {
+    font-family: "Uncial Antiqua", Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 14px;
+}
