@@ -1,8 +1,7 @@
 /* chifoumi 
 to do list: 
-- create empty arrays for playerChoice /done
-- create a const sandraChoice that show a random number between 1 and 3/ done  
-- create the function to make a link with shifumi assets
+- create objects Sandra and Player with choice and lifecounter key /done 
+- create the listener  make a link with shifumi assets / Done
 - create the function that compare playerChoice array and sandraChoice and chose the winner
 - create the function that count amount of games won */
 let sandra = {
