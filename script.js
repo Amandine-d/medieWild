@@ -5,6 +5,15 @@ to do list:
 - create the function to make a link with shifumi assets
 - create the function that compare playerChoice array and sandraChoice and chose the winner
 - create the function that count amount of games won */
+let sandra = {
+    choice: [],
+    lifeCounter  : 3, 
+};
+
+let player = {
+    choice: [],
+    lifeCounter : 3,
+}; 
 
 let sandraChoice = [];
 let playerChoice = [];
@@ -15,23 +24,23 @@ const choice = document.querySelectorAll(".player-choice");
 function transformRandom() {
   const random = Math.floor(Math.random() * 3) + 1;
   if (random === 1) {
-    sandraChoice.push("paper");
+    sandra.choice.push("paper");
   } else if (random === 2) {
-    sandraChoice.push("rock");
+    sandra.choice.push("rock");
   } else if (random === 3) {
-    sandraChoice.push("scisors");
+    sandra.choice.push("scisors");
   }
 }
 
 //click and touch event choice
 for (let i = 0; i < choice.length; i++) {
   function fillPlayerChoice() {
-    playerChoice = [];
-    playerChoice.push(choice[i].value);
-    sandraChoice = [];
+    player.choice = [];
+    player.choice.push(choice[i].value);
+    sandra.choice = [];
     transformRandom();
-    console.log(playerChoice);
-    console.log(sandraChoice);
+    console.log(player.choice);
+    console.log(sandra.choice);
   }
   choice[i].addEventListener("click", fillPlayerChoice);
   choice[i].addEventListener("touch", fillPlayerChoice);
