@@ -6,30 +6,36 @@ to do list:
 - create the function that compare playerChoice array and sandraChoice and chose the winner
 - create the function that count amount of games won */
 
-let sandraChoice = Math.floor(Math.random() * 3) + 1;
+let sandraChoice = [];
 let playerChoice = [];
 
 const choice = document.querySelectorAll(".player-choice");
 
-const paper = "1";
-const rock = "2";
-const scisors = "3";
+//  function transform random choice to rock scisors paper
+function transformRandom() {
+  const random = Math.floor(Math.random() * 3) + 1;
+  if (random === 1) {
+    sandraChoice.push("paper");
+  } else if (random === 2) {
+    sandraChoice.push("rock");
+  } else if (random === 3) {
+    sandraChoice.push("scisors");
+  }
+}
 
 //click and touch event choice
 for (let i = 0; i < choice.length; i++) {
-function fillPlayerChoice() {
+  function fillPlayerChoice() {
     playerChoice = [];
     playerChoice.push(choice[i].value);
+    sandraChoice = [];
+    transformRandom();
     console.log(playerChoice);
+    console.log(sandraChoice);
   }
   choice[i].addEventListener("click", fillPlayerChoice);
   choice[i].addEventListener("touch", fillPlayerChoice);
 }
-
-
-
-// function that chose the winner
-
-// function chooseTheWinner(){
-//     if()
+// function choseTheWinner(){
+//     if
 // }
