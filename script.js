@@ -8,4 +8,3 @@ to do list:
 let sandraChoice = Math.floor(Math.random() * 3) + 1;
 let playerChoice = [];
 
-function randomNumber() {}
