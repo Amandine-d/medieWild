@@ -17,12 +17,16 @@ const scisors = "3";
 
 //click and touch event choice
 for (let i = 0; i < choice.length; i++) {
-  choice[i].addEventListener("click", function () {
+function fillPlayerChoice() {
     playerChoice = [];
     playerChoice.push(choice[i].value);
     console.log(playerChoice);
-  });
+  }
+  choice[i].addEventListener("click", fillPlayerChoice);
+  choice[i].addEventListener("touch", fillPlayerChoice);
 }
+
+
 
 // function that chose the winner
 
