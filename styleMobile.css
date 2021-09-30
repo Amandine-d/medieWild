@@ -17,11 +17,21 @@ body {
   ); /*4 fois 3 columnes de 10px 300px 10px)*/
   text-align: center;
   grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
+  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
 header {
   background-color: #f45c45;
   text-align: center;
+  height: 15vh;
+  display: block;
+}
+
+.logo-wild {
+  height: 14vh;
+}
+
+.index {
   grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
   background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
     url(assets/blasonWild.png), url(assets/blasonWild.png);
@@ -38,7 +48,7 @@ header {
   width: 180px;
   height: 80px;
   text-align: center;
-  padding: 5px;
+  padding: 8px;
 }
 
 #bubblePierre {
@@ -121,7 +131,26 @@ h4 {
   margin-top: 33, 3%;
 }
 
+nav {
+  display: flex;
+  justify-content: right;
+  align-items:flex-start;
+  justify-items: flex-end;
+}
+
 .nav-pierre {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 12px;
+  background-image: url(assets/bullefootermobi.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 20vh;
+  text-align: center;
+  color: black;
+}
+
+.floating-head {
+  background-color: transparent;
+  border: none;
 }
