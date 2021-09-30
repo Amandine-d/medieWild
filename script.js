@@ -4,7 +4,8 @@ to do list:
 - create the listener  make a link with shifumi assets / Done
 - create the function that compare playerChoice array and sandraChoice and chose the winner
 - create the function that count amount of games won */
-let sandra = {
+
+const sandra = {
   choice: [],
   winCounter: 0,
   tryVictoryMessage: "Sandra wins !",
@@ -13,7 +14,7 @@ let sandra = {
   trashGameVictoryMessage: "You cannot fuck me,You cannot fuck me, I am unfuckable! I have never been fucked !",
 };
 
-let player = {
+const player = {
   choice: [],
   winCounter: 0,
   tryVictoryMessage: "You win !",
@@ -21,10 +22,13 @@ let player = {
   trashTryVictoryMessage: "",
   trashGameVictoryMessage: "Come the fuck in or fuck the fuck off !",
 };
+//DOM variables
 
 const choice = document.querySelectorAll(".player-choice");
+let whoWins = document.querySelector(".who-wins");
 
 //  function transform random choice to rock scisors paper
+
 function transformRandom() {
   const random = Math.floor(Math.random() * 3) + 1;
   if (random === 1) {
@@ -47,6 +51,8 @@ for (let i = 0; i < choice.length; i++) {
     console.log(sandra.choice);
     tryWinner();
     checkGameWinner();
+    console.log(sandra.winCounter);
+    console.log(player.winCounter);
   }
   choice[i].addEventListener("click", fillPlayerChoice);
   choice[i].addEventListener("touch", fillPlayerChoice);
@@ -56,16 +62,16 @@ for (let i = 0; i < choice.length; i++) {
 
 function tryWinner() {
   if (sandra.choice[0] === player.choice[0]) {
-    console.log("It's a tie");
+    whoWins.innerHTML =`${("It's a tie")}`;
   } else if (
     (sandra.choice[0] === "paper" && player.choice[0] === "rock") ||
     (sandra.choice[0] === "rock" && player.choice[0] === "scissors") ||
-    (sandra.choice[0] === "scisors" && player.choice[0] === "paper")
+    (sandra.choice[0] === "scissors" && player.choice[0] === "paper")
   ) {
-    console.log(sandra.tryVictoryMessage);
+    whoWins.innerHTML = `${(sandra.tryVictoryMessage)}`;
     sandra.winCounter += 1;
   } else {
-    console.log(player.tryVictoryMessage);
+    whoWins.innerHTML =`${(player.tryVictoryMessage)}`;
     player.winCounter += 1;
   }
 }
@@ -75,8 +81,12 @@ function tryWinner() {
 function checkGameWinner() {
   if (sandra.winCounter === 3) {
     console.log(sandra.gameVictoryMessage);
+    sandra.winCounter = 0;
+    player.winCounter = 0;
   } else if (player.winCounter === 3) {
     console.log(sandra.gameVictoryMessage);
+    sandra.winCounter = 0;
+    player.winCounter = 0;
   }
 }
 
