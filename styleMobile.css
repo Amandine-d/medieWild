@@ -1,53 +1,127 @@
 body {
   background-color: black;
   color: white;
-  max-width: 320px;
-  max-height: 768px;
+  /*max-width: 320px;*/
+  max-height: 568px;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  /*display: grid;
-  grid-template-rows: repeat(4, 10vh 5vh 50vh);*/
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 15vh 8vh 20vh 40vh;
+  grid-template-columns: repeat(
+    4,
+    10px 300px 10px
+  ); /*4 fois 3 columnes de 10px 300px 10px)*/
+  text-align: center;
+  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
 }
 
 header {
   background-color: #f45c45;
-  height: 10vh;
-  display: block;
   text-align: center;
-}
-
-#Pierre {
-  display: grid;
-  grid-template-rows: 5vh 20vh 50vh;
-  grid-template-columns: 320px;
+  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
+  background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
+    url(assets/blasonWild.png), url(assets/blasonWild.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 70px, 390px, 710px, 1030px;
 }
 
 .bubble-text {
-  grid-area: 2/1/2/1;
   z-index: 3;
   color: black;
   font-size: 12px;
-  margin-right: 30px;
-  margin-top: 40px;
+  display: block;
+  width: 180px;
+  height: 80px;
+  text-align: center;
+  padding: 5px;
 }
 
-.bubble {
+#bubblePierre {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#bubbleXavier {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#bubbleSandra {
+  grid-area: 3 / 8 / 4 / 9;
+}
+
+.bubble-pierre {
   width: 200px;
-  grid-area: 2/1/2/1;
+  grid-area: 3 / 2 / 4 / 3;
   z-index: 2;
-  margin-left: 10px;
-  margin-top: 20px;
-  /*display : none;*/
 }
 
-.avatar {
-  height: 50vh;
-  grid-area: 2/1/3/1;
+.bubble-xavier {
+  width: 200px;
+  grid-area: 3 / 5 / 4 / 6;
+  z-index: 2;
+}
+
+.bubble-sandra {
+  width: 200px;
+  grid-area: 3 / 8 / 4 / 9;
+  z-index: 2;
+}
+
+.avatar-pierre {
+  height: 300px;
+  grid-row-start: 3;
+  z-index: 1;
+}
+
+.avatar-xavier {
+  height: 300px;
+  grid-area: 3 / 5 / 5 / 6;
+  z-index: 1;
+}
+
+.avatar-sandra {
+  height: 300px;
+  grid-area: 3 / 8 / 5 / 9;
   z-index: 1;
 }
 
 h1 {
   font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
   text-align: center;
-  font-size: 14px;
-  grid-row: 1;
+  font-size: 16px;
+  grid-area: 2/2/3/3;
+  margin-top: 33, 3%;
+}
+
+h2 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/5/3/6;
+  margin-top: 33, 3%;
+}
+
+h3 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/8/3/9;
+  margin-top: 33, 3%;
+}
+
+h4 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/11/3/12;
+  margin-top: 33, 3%;
+}
+
+.nav-pierre {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
