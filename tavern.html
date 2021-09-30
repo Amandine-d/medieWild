@@ -22,23 +22,54 @@
         height="60vh"
       />
     </header>
-    <div class="chifoumi">
+    <div class="chifumi">
+      
+      <button class="trash-version-toggle"></button>
+      
       <div class="challenge">
-        <button class="start-challenge">Challenge Accepted</button>
+        <button class="start-challenge">Accept</button>
+        <button class="reject-challenge">Reject</button>
       </div>
-      <div class="sandra-score"></div>
-        <h1 class="name-tag">Sandra</h1>
-        <h1 class="score">0</h1>
-      <div class="player-score">
-        <h1 class="name-tag">YOU</h1>
-        <h1 class="score">0</h1>
+
+      <div class="sandra">
+        <h1 id="sandra-tag" class="name-tag">Sandra</h1>
+        <h1 id="sandra-score" class="score">0</h1>
       </div>
+
+      <div class="player">
+        <h1 id="playerTag" class="name-tag">YOU</h1>
+        <h1 id="playerScore" class="score">0</h1>
+      </div>
+
       <div class="main-player-choice">
         <button id="paper" class="player-choice" value="paper">Paper</button>
         <button id="rock" class="player-choice" value="rock">Rock</button>
-        <button id="scisors" class="player-choice" value="scisors">Scisors</button>
+        <button id="scisors" class="player-choice" value="scissors">Scisors</button>
       </div>
-      <button class="Try Again">Try again</button>
+
+      <div class="combat-message">
+        <h2 class="chi">CHIIIIIIIII</h2>
+        <h2 class="fu">FUUUUUUUUUU</h2>
+        <h2 class="mi">MIIIIIIIIII</h2>
+      </div>
+      
+      <div class="hands-result">
+        <img src="" alt="sandra-hand">
+        <img src="" alt="player-hand">  
+      </div>
+      
+      <div class="try-victory-message">
+        <h1 class="sandra-wins">s</h1>
+        <h1 class="=you-win">y</h1>
+      </div>
+
+      <div class="game-victory-message"></div>
+        <h1 class="sandra-victory-message"></h1>
+        <h1 class="player-victory-message"></h1>
+        <button class="try-again">Try again</button>
+        <button class="quit">Quit</button>
+      </div>
+      
     </div>
     <footer>
       <button class="floatingHead">Pierre's head</button>

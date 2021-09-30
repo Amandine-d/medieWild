@@ -7,11 +7,19 @@ to do list:
 let sandra = {
   choice: [],
   winCounter: 0,
+  tryVictoryMessage: "Sandra wins !",
+  gameVictoryMessage: "Sandra wins, She kicks you out of Tavern !",
+  trashTryVictoryMessage:" You act like an octopus trying to unhook a bra !",
+  trashGameVictoryMessage: "You cannot fuck me,You cannot fuck me, I am unfuckable! I have never been fucked !",
 };
 
 let player = {
   choice: [],
   winCounter: 0,
+  tryVictoryMessage: "You win !",
+  gameVictoryMessage: "You win, enjoy your cup of coffee !",
+  trashTryVictoryMessage: "",
+  trashGameVictoryMessage: "Come the fuck in or fuck the fuck off !",
 };
 
 const choice = document.querySelectorAll(".player-choice");
@@ -24,7 +32,7 @@ function transformRandom() {
   } else if (random === 2) {
     sandra.choice.push("rock");
   } else if (random === 3) {
-    sandra.choice.push("scisors");
+    sandra.choice.push("scissors");
   }
 }
 
@@ -51,13 +59,13 @@ function tryWinner() {
     console.log("It's a tie");
   } else if (
     (sandra.choice[0] === "paper" && player.choice[0] === "rock") ||
-    (sandra.choice[0] === "rock" && player.choice[0] === "scisors") ||
+    (sandra.choice[0] === "rock" && player.choice[0] === "scissors") ||
     (sandra.choice[0] === "scisors" && player.choice[0] === "paper")
   ) {
-    console.log("Sandra wins !");
+    console.log(sandra.tryVictoryMessage);
     sandra.winCounter += 1;
   } else {
-    console.log("You win !");
+    console.log(player.tryVictoryMessage);
     player.winCounter += 1;
   }
 }
@@ -66,11 +74,12 @@ function tryWinner() {
 
 function checkGameWinner() {
   if (sandra.winCounter === 3) {
-    console.log("Sandra wins the game, She gets her cup of coffee first !");
+    console.log(sandra.gameVictoryMessage);
   } else if (player.winCounter === 3) {
-    console.log("You win the game, enjoy your cup of coffee !");
+    console.log(sandra.gameVictoryMessage);
   }
 }
 
 // button try again
-// score table 
+// score table
+// toggle trash version
