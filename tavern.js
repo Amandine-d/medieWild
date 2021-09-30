@@ -9,7 +9,7 @@ const sandra = {
     choice: [],
     winCounter: 0,
     tryVictoryMessage: "Sandra wins !",
-    gameVictoryMessage: "Sandra wins, She kicks you out of Tavern !",
+    gameVictoryMessage: "Sandra wins, She kicks you out of the kitchen!",
   
   };
   
@@ -28,7 +28,13 @@ const sandra = {
   const finalGameVictoryMessage = document.querySelector(
     ".final-game-victory-message"
   );
-  
+  const startChallenge = document.querySelector(".start-challenge");
+  const rejectChallenge = document.querySelector(".reject-challenge");
+  const challenge = document.querySelector(".challenge");
+  const sandraTagScore = document.querySelector(".sandra-tag-score");
+  const playerTagScore = document.querySelector(".player-tag-score");  
+  const playerChoiceContainer = document.querySelector(".player-choice-container");
+
   //  function transform random choice to rock scisors paper
   
   function transformRandom() {
@@ -41,7 +47,16 @@ const sandra = {
       sandra.choice.push("scissors");
     }
   }
-  
+  function openChallengeDiv() {
+    challenge.style.display = "none";
+    sandraTagScore.style.display = "initial";
+    playerTagScore.style.display = "initial"; 
+    playerChoiceContainer.style.display = "initial";    
+  }
+
+  startChallenge.addEventListener("click", openChallengeDiv);
+  startChallenge.addEventListener("touch", openChallengeDiv);
+
   //click and touch event choice
   
   for (let i = 0; i < choice.length; i++) {
@@ -61,7 +76,9 @@ const sandra = {
     choice[i].addEventListener("touch", fillPlayerChoice);
   }
   
-  //chose the winner and the add a win to the player or sandra scorecounter
+
+
+  //chose the winner and the add a win to the player or sandra score counter fill the whoWins Dom with victory message
   
   function tryWinner() {
     if (sandra.choice[0] === player.choice[0]) {
@@ -79,7 +96,7 @@ const sandra = {
     }
   }
   
-  // check function to select a WINNER of the GAME
+  // check function to select a WINNER of the GAME reset won games counter fill the finalGameVictoryMessage DOM
   
   function checkGameWinner() {
     if (sandra.winCounter === 3) {
