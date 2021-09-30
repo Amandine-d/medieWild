@@ -14,9 +14,6 @@ let player = {
   winCounter: 0,
 };
 
-let sandraChoice = [];
-let playerChoice = [];
-
 const choice = document.querySelectorAll(".player-choice");
 
 //  function transform random choice to rock scisors paper
