@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script  defer src="tavern.js"></script>
+    <script defer src="tavern.js"></script>
   </head>
   <body>
     <header>
@@ -22,54 +22,57 @@
         height="60vh"
       />
     </header>
-    <div class="chifumi">
-      
+    <div class="shifumi">
       <button class="trash-version-toggle"></button>
-      
+
       <div class="challenge">
-        <h1 class="challenge-message">Normally it's my turn but would you mind a little challenge</h1>
+        <h1 class="challenge-message">
+          Normally it's my turn but would you mind a little challenge
+        </h1>
         <button class="start-challenge">Accept</button>
         <button class="reject-challenge">Reject</button>
         <h1 class="reject-message">Ok I'll make my coffee first</h1>
       </div>
+      <div class="shifumi-loop">
+        
+        <div class="sandra-tag-score">
+          <h1 id="sandra-tag" class="name-tag">Sandra</h1>
+          <h1 id="sandra-score" class="score">0</h1>
+        </div>
 
-      <div class="sandra-tag-score">
-        <h1 id="sandra-tag" class="name-tag">Sandra</h1>
-        <h1 id="sandra-score" class="score">0</h1>
-      </div>
+        <div class="player-choice-container">
+          <button id="paper" class="player-choice" value="paper">Paper</button>
+          <button id="rock" class="player-choice" value="rock">Rock</button>
+          <button id="scisors" class="player-choice" value="scissors">
+            Scissors
+          </button>
+        </div>
 
-      <div class="player-tag-score">
-        <h1 id="player-tag" class="name-tag">YOU</h1>
-        <h1 id="player-score" class="score">0</h1>
-      </div>
+        <div class="player-tag-score">
+          <h1 id="player-score" class="score">0</h1>
+          <h1 id="player-tag" class="name-tag">YOU</h1>
+        </div>
 
-      <div class="player-choice-container">
-        <button id="paper" class="player-choice" value="paper">Paper</button>
-        <button id="rock" class="player-choice" value="rock">Rock</button>
-        <button id="scisors" class="player-choice" value="scissors">Scisors</button>
-      </div>
+        <div class="combat-message">
+          <h2 class="shi">SHIIIIIIIII</h2>
+          <h2 class="fu">FUUUUUUUUUU</h2>
+          <h2 class="mi">MIIIIIIIIII</h2>
+        </div>
 
-      <div class="combat-message">
-        <h2 class="shi">SHIIIIIIIII</h2>
-        <h2 class="fu">FUUUUUUUUUU</h2>
-        <h2 class="mi">MIIIIIIIIII</h2>
-      </div>
-      
-      <div class="hands-result">
-        <img src="" alt="sandra-hand">
-        <img src="" alt="player-hand">  
-      </div>
-      
-      <div class="try-victory-message">
-        <h1 class="who-wins">w</h1>
-      </div>
+        <div class="hands-result">
+          <img src="" alt="sandra-hand" />
+          <img src="" alt="player-hand" />
+        </div>
 
+        <div class="try-victory-message">
+          <h1 class="who-wins">w</h1>
+        </div>
+      </div>
       <div class="game-victory-message-container">
         <h1 class="final-game-victory-message">G</h1>
         <button class="try-again">Try again</button>
         <button class="quit">Quit</button>
       </div>
-
     </div>
     <footer>
       <button class="floatingHead">Pierre's head</button>
