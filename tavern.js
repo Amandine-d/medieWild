@@ -36,6 +36,8 @@ const playerChoiceContainer = document.querySelector(
 );
 const sandraScore = document.querySelector("#sandra-score");
 const playerScore = document.querySelector("#player-score");
+const combatMessageContainer = document.querySelector(".combat-message-container");
+const shi = document.querySelector("#shi");
 
 //  function transform random choice to rock scisors paper
 
@@ -51,9 +53,9 @@ function transformRandom() {
 }
 function openChallengeDiv() {
   challenge.style.display = "none";
-  sandraTagScore.style.display = "initial";
-  playerTagScore.style.display = "initial";
-  playerChoiceContainer.style.display = "initial";
+  sandraTagScore.style.display = "block";
+  playerTagScore.style.display = "block";
+  playerChoiceContainer.style.display = "block";
 }
 
 startChallenge.addEventListener("click", openChallengeDiv);
@@ -67,6 +69,7 @@ for (let i = 0; i < choice.length; i++) {
     player.choice.push(choice[i].value);
     sandra.choice = [];
     transformRandom();
+    battelMessage();
     console.log(player.choice);
     console.log(sandra.choice);
     tryWinner();
@@ -118,4 +121,14 @@ function checkGameWinner() {
     sandraScore.innerHTML = "0";
     playerScore.innerHTML = "0";
   }
+}
+
+//battle message animation shii fuu mii 
+function battelMessage(){
+  playerChoiceContainer.style.display = "none";
+  combatMessageContainer.style.display = "initial";
+  shi.style.display = "block";
+  // shi.classList.add("shi-apparition"); 
+  combatMessageContainer.style.display = "none";
+  playerChoiceContainer.style.display = "initial";
 }

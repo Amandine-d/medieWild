@@ -1,36 +1,65 @@
-.trash-version-toggle{
-    display: none;
+.trash-version-toggle {
+  display: none;
 }
 
-.reject-message{
-    display: none;
+.reject-message {
+  display: none;
 }
 
-.sandra-tag-score{
-    display: none;
+.sandra-tag-score {
+  display: none;
 }
 
-.player-tag-score{
-    display: none;
+.player-tag-score {
+  display: none;
 }
 
-.player-choice-container{
-    display: none;
+.player-choice-container {
+  display: none;
 }
 
-.combat-message{
-    display: none;
+.combat-message {
+  display: none;
 }
 
-.hands-result{
-    display: none;
+.hands-result {
+  display: none;
 }
 
-.try-victory-message{
-    display: none;
+.try-victory-message {
+  display: none;
 }
 
-.game-victory-message-container{
-    display: none;
+.game-victory-message-container {
+  display: none;
 }
 
+#shi {
+  display: none;
+  width: 90vh;
+  height: 25vh;
+}
+.shi-apparition {
+  display: block;
+  opacity: 1;
+  /* animation-name: apparition;
+  animation-delay: 2s;
+  animation-duration: 3s; */
+}
+
+#fu {
+  display: none;
+}
+
+#mi {
+  display: none;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
