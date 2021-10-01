@@ -1,28 +1,28 @@
-function getRandomArbitrary() {
-    let randomChoice = Math.floor(Math.random() * 6) + 1;
-    return randomChoice;
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-console.log (randomChoice);
-
 playButtons = document.getElementsByClassName("play");
+
+let randomChoice = getRandomIntInclusive(1, 6);
+console.log(randomChoice);
 let userChoice;
 
 for (let i = 0; i < playButtons.length; i++) {
-    
-    playButtons[i].addEventListener("click", function () {
+  playButtons[i].addEventListener("click", function () {
     userChoice = playButtons[i].value;
-    /*console.log(userChoice)*/
-})
-  
-    playButtons[i].addEventListener("click", function compare() {
+    console.log(userChoice);
+  });
+
+  playButtons[i].addEventListener("click", function compare() {
     if (randomChoice == userChoice) {
       console.log("yataaa");
-      getRandomArbitrary;
-      console.log (randomChoice);
+      randomChoice = getRandomIntInclusive(1, 6);
+      console.log(randomChoice);
     } else {
       console.log("try again");
-    }})
-
+    }
+  });
 }

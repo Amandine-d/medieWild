@@ -1,3 +1,5 @@
+/*sur toutes les pages */
+
 body {
   background-color: black;
   color: white;
@@ -6,18 +8,6 @@ body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
-}
-
-.grid-container-index {
-  display: grid;
-  grid-template-rows: 15vh 8vh 20vh 40vh;
-  grid-template-columns: repeat(
-    4,
-    10px 300px 10px
-  ); /*4 fois 3 columnes de 10px 300px 10px)*/
-  text-align: center;
-  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
-  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
 header {
@@ -29,6 +19,47 @@ header {
 
 .logo-wild {
   height: 14vh;
+}
+
+/*footer tete pierre*/
+
+nav {
+  display: flex;
+  justify-content: right;
+  align-items:flex-start;
+  justify-items: flex-end;
+}
+
+.nav-pierre {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-image: url(assets/bullefootermobi.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 20vh;
+  text-align: center;
+  color: black;
+}
+
+.floating-head {
+  background-color: transparent;
+  border: none;
+}
+/*footer tete pierre*/
+
+/*page index*/
+
+.grid-container-index {
+  display: grid;
+  grid-template-rows: 15vh 8vh 20vh 40vh;
+  grid-template-columns: repeat(
+    4,
+    10px 300px 10px
+  ); /*4 fois 3 columnes de 10px 300px 10px)*/
+  text-align: center;
+  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
+  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
 .index {
@@ -99,6 +130,8 @@ header {
   z-index: 1;
 }
 
+/*attention balises titres modifiées jusque h4*/
+
 h1 {
   font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
   text-align: center;
@@ -131,45 +164,76 @@ h4 {
   margin-top: 33, 3%;
 }
 
-nav {
-  display: flex;
-  justify-content: right;
-  align-items:flex-start;
-  justify-items: flex-end;
+/*page dojo*/
+
+.dojo {
+display: flex;
+justify-content: center;
+padding: 2vh;
+text-align: left;
 }
 
-.nav-pierre {
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  background-image: url(assets/bullefootermobi.png);
-  background-size: 200px;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 20vh;
-  text-align: center;
-  color: black;
-}
-
-.floating-head {
-  background-color: transparent;
-  border: none;
-}
-
-/*.grid-dojo {
+#grid-dojo {
   display : grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 15vh 1fr;
+  grid-template-columns: 1fr 20vw 1fr;
+  grid-template-rows: 1fr;
+  z-index:1;
+  text-align: center;
+  padding: 3%;
+  
 }
 
-.bubble-dojo{
-  z-index: 1;
-  width : 30vw;
-  grid-area: 1/2/2/2 ;
+.dojo-text{
+  width: 30vw;
+  height: 60vh;
+  background-image: url(assets/bullemobi.png);
+  background-repeat: no-repeat ;
+  background-size: contain;
+  color: black;
+  font-size: 12px;
+  text-align:center;
+  grid-area: 1/1/2/2;
+  justify-self: center;
 }
 
-.play{
-  z-index: 2;
-  width : 5vw;
-  height: 5vw;
-  grid-area: 1/2/2/2;*/
+.pierre-dojo{
+  grid-area: 1/2/2/3;
+  width: 30vw;
+  align-self: center;
+  justify-self: center;
+ 
+}
+
+/*button pacement for screen*/
+
+#grid-button {
+  grid-area: 1/1/2/2 ;
+  display : grid;
+  grid-template-columns: 15% 1fr 1fr 1fr 15%;
+  grid-template-rows: 18% 1fr 1fr 1fr 6fr;
+  z-index:2;
+}
+/*row-start/column-start/row-end/column-end*/
+#one {
+  grid-area: 2/2/3/3;
+}
+
+#two {
+  grid-area: 2/3/3/4;
+}
+
+#three{
+  grid-area: 2/4/3/5;
+}
+
+#four{
+  grid-area: 3/2/4/3;
+}
+
+#five{
+  grid-area: 3/3/4/4;
+}
+
+#six{
+  grid-area: 3/4/4/5;
 }
