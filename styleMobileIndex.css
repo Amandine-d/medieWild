@@ -1,7 +1,7 @@
 /*sur toutes les pages */
 
 body {
-  background-color: black;
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70) );
   color: white;
   /*max-width: 320px;*/
   /*max-height: 568px;*/
@@ -17,9 +17,16 @@ header {
   display: block;
 }
 
-.logo-wild {
-  height: 14vh;
+.index {
+  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
+  background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
+    url(assets/blasonWild.png), url(assets/blasonWild.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 70px, 390px, 710px, 1030px;
 }
+
+
 
 /*footer tete pierre*/
 
@@ -62,14 +69,6 @@ nav {
   -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
-.index {
-  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
-  background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
-    url(assets/blasonWild.png), url(assets/blasonWild.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 70px, 390px, 710px, 1030px;
-}
 
 .bubble-text {
   z-index: 3;
@@ -162,94 +161,4 @@ h4 {
   font-size: 16px;
   grid-area: 2/11/3/12;
   margin-top: 33, 3%;
-}
-
-/*page dojo*/
-
-.dojo {
-display: flex;
-justify-content: center;
-padding: 2vh;
-text-align: left;
-}
-
-#grid-dojo {
-  display : grid;
-  grid-template-columns: 1fr 20vw 1fr;
-  grid-template-rows: 1fr;
-  z-index:1;
-  text-align: center;
-  padding: 3%;
-  
-}
-
-.dojo-text{
-  width: 30vw;
-  height: 60vh;
-  background-image: url(assets/bullemobi.png);
-  background-repeat: no-repeat ;
-  background-size: contain;
-  color: black;
-  font-size: 1.4vw;
-  text-align:center;
-  grid-area: 1/1/2/2;
-  justify-self: center;
-}
-
-.pierre-dojo{
-  grid-area: 1/2/2/3;
-  width: 30vw;
-
-  justify-self: center;
- 
-}
-
-/*button pacement for screen*/
-
-#grid-button {
-  grid-area: 1/1/2/2 ;
-  display : grid;
-  grid-template-columns: 13% 1fr 1fr 1fr 15%;
-  grid-template-rows: 2.5fr 1fr 1fr 1fr 6fr;
-  z-index:2;
-}
-/*row-start/column-start/row-end/column-end*/
-#one {
-  grid-area: 2/2/3/3;
-}
-
-#two {
-  grid-area: 2/3/3/4;
-}
-
-#three{
-  grid-area: 2/4/3/5;
-}
-
-#four{
-  grid-area: 3/2/4/3;
-}
-
-#five{
-  grid-area: 3/3/4/4;
-}
-
-#six{
-  grid-area: 3/4/4/5;
-}
-
-#result{
-  grid-area: 4/2/5/5;
-  color:black;
-  font-size: 12px;
-}
-
-/*mediaquery pour mobile*/
-
-@media screen and (max-width : 500) {
-
-  body{
-    max-width: 320px;
-  }
-
 }

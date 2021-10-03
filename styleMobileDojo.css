@@ -21,9 +21,6 @@ body {
     background-position: center;
   }
   
-  .logo-wild {
-    height: 14vh;
-  }
   
   /*footer tete pierre*/
   
@@ -52,114 +49,15 @@ body {
   }
   /*footer tete pierre*/
   
-  /*page index*/
   
-  .grid-container-index {
-    display: grid;
-    grid-template-rows: 15vh 8vh 20vh 40vh;
-    grid-template-columns: repeat(
-      4,
-      10px 300px 10px
-    ); /*4 fois 3 columnes de 10px 300px 10px)*/
-    text-align: center;
-    grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
-    -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
-  }
-  
-  .bubble-text {
-    z-index: 3;
-    color: black;
-    font-size: 12px;
-    display: block;
-    width: 180px;
-    height: 80px;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  #bubblePierre {
-    grid-area: 3 / 2 / 4 / 3;
-  }
-  
-  #bubbleXavier {
-    grid-area: 3 / 5 / 4 / 6;
-  }
-  
-  #bubbleSandra {
-    grid-area: 3 / 8 / 4 / 9;
-  }
-  
-  .bubble-pierre {
-    width: 200px;
-    grid-area: 3 / 2 / 4 / 3;
-    z-index: 2;
-  }
-  
-  .bubble-xavier {
-    width: 200px;
-    grid-area: 3 / 5 / 4 / 6;
-    z-index: 2;
-  }
-  
-  .bubble-sandra {
-    width: 200px;
-    grid-area: 3 / 8 / 4 / 9;
-    z-index: 2;
-  }
-  
-  .avatar-pierre {
-    height: 300px;
-    grid-row-start: 3;
-    z-index: 1;
-  }
-  
-  .avatar-xavier {
-    height: 300px;
-    grid-area: 3 / 5 / 5 / 6;
-    z-index: 1;
-  }
-  
-  .avatar-sandra {
-    height: 300px;
-    grid-area: 3 / 8 / 5 / 9;
-    z-index: 1;
-  }
-  
-  /*attention balises titres modifiées jusque h4*/
-  
+  /*page dojo*/
+
   h1 {
     font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
     text-align: center;
     font-size: 16px;
     grid-area: 2/2/3/3;
-    margin-top: 33, 3%;
-  }
-  
-  h2 {
-    font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-    text-align: center;
-    font-size: 16px;
-    grid-area: 2/5/3/6;
-    margin-top: 33, 3%;
-  }
-  
-  h3 {
-    font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-    text-align: center;
-    font-size: 16px;
-    grid-area: 2/8/3/9;
-    margin-top: 33, 3%;
-  }
-  
-  h4 {
-    font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-    text-align: center;
-    font-size: 16px;
-    grid-area: 2/11/3/12;
-    margin-top: 33, 3%;
-  }
-  
-  /*page dojo*/
+    margin-top: 33, 3%;}
   
   .dojo {
   display: flex;
@@ -170,7 +68,7 @@ body {
   
   #grid-dojo {
     display : grid;
-    grid-template-columns: 1fr 20vw 1fr;
+    grid-template-columns: 1fr 40vw 1fr;
     grid-template-rows: 1fr;
     z-index:1;
     text-align: center;
@@ -193,8 +91,7 @@ body {
   
   .pierre-dojo{
     grid-area: 1/2/2/3;
-    width: 30vw;
-  
+    width: 60vw;  
     justify-self: center;
    
   }
@@ -202,10 +99,10 @@ body {
   /*button pacement for screen*/
   
   #grid-button {
-    grid-area: 1/1/2/2 ;
+    grid-area: 1/3/2/4 ;
     display : grid;
-    grid-template-columns: 13% 1fr 1fr 1fr 15%;
-    grid-template-rows: 2.5fr 1fr 1fr 1fr 6fr;
+    grid-template-columns: 5px 1fr 1fr 1fr 5px;
+    grid-template-rows: 5px 1fr 1fr 1fr 6fr;
     z-index:2;
   }
   /*row-start/column-start/row-end/column-end*/
