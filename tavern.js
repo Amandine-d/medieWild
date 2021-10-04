@@ -105,6 +105,10 @@ function tryWinner() {
     }
   } else {
     whoWins.innerHTML = `${player.tryVictoryMessage}`;
+    player.winCounter += 1;
+    if (player.winCounter !== 0) {
+      playerScore.innerHTML = `${player.winCounter}`;
+    }
   }
 }
 
