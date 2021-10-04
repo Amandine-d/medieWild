@@ -36,9 +36,15 @@ const playerChoiceContainer = document.querySelector(
 );
 const sandraScore = document.querySelector("#sandra-score");
 const playerScore = document.querySelector("#player-score");
-const combatMessageContainer = document.querySelector(".combat-message-container");
-const shi = document.querySelector("#shi");
-
+const combatMessageContainer = document.querySelector(
+  ".combat-message-container"
+);
+const shi = document.querySelector(".shi");
+const fu = document.querySelector(".fu");
+const mi = document.querySelector(".mi");
+const tryVictoryMessageContainer = document.querySelector(
+  ".try-victory-message-container"
+);
 //  function transform random choice to rock scisors paper
 
 function transformRandom() {
@@ -52,10 +58,10 @@ function transformRandom() {
   }
 }
 function openChallengeDiv() {
-  challenge.style.display = "none";
-  sandraTagScore.style.display = "block";
-  playerTagScore.style.display = "block";
-  playerChoiceContainer.style.display = "block";
+  challenge.classList.add("challenge-closed");
+  sandraTagScore.classList.add("sandra-tag-score-open");
+  playerTagScore.classList.add("player-tag-score-open");
+  playerChoiceContainer.classList.add("player-choice-container-open");
 }
 
 startChallenge.addEventListener("click", openChallengeDiv);
@@ -69,10 +75,11 @@ for (let i = 0; i < choice.length; i++) {
     player.choice.push(choice[i].value);
     sandra.choice = [];
     transformRandom();
-    battelMessage();
+    battleMessage();
     console.log(player.choice);
     console.log(sandra.choice);
     tryWinner();
+    tryVictoryMessage();
     checkGameWinner();
     console.log(sandra.winCounter);
     console.log(player.winCounter);
@@ -98,10 +105,6 @@ function tryWinner() {
     }
   } else {
     whoWins.innerHTML = `${player.tryVictoryMessage}`;
-    player.winCounter += 1;
-    if (player.winCounter !== 0) {
-      playerScore.innerHTML = `${player.winCounter}`;
-    }
   }
 }
 
@@ -123,12 +126,25 @@ function checkGameWinner() {
   }
 }
 
-//battle message animation shii fuu mii 
-function battelMessage(){
-  playerChoiceContainer.style.display = "none";
-  combatMessageContainer.style.display = "initial";
-  shi.style.display = "block";
-  // shi.classList.add("shi-apparition"); 
-  combatMessageContainer.style.display = "none";
-  playerChoiceContainer.style.display = "initial";
+//battle message animation shii fuu mii
+function battleMessage() {
+  playerChoiceContainer.classList.remove("player-choice-container-open");
+  combatMessageContainer.classList.add("combat-message-container-open");
+  shi.classList.add("shi-open");
+  // shi.classList.remove("shi-open");
+  fu.classList.add("fu-open");
+  // fu.classList.remove("fu-open");
+  mi.classList.add("mi-open");
+  // mi.classList.remove("mi-open");
+  // combatMessageContainer.classList.remove("combat-message-container-open");
+}
+
+// try victory message with hand result function
+
+function tryVictoryMessage() {
+  tryVictoryMessageContainer.classList.add(
+    "try-victory-message-container-open"
+  );
+  // tryVictoryMessageContainer.classList.remove("try-victory-message-container-open");
+  playerChoiceContainer.classList.add("player-choice-container-open");
 }
