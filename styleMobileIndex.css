@@ -3,6 +3,7 @@
 body {
   background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
+  /*max-height: 812px;*/
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -10,17 +11,9 @@ body {
 
 header {
   background-color: #f45c45;
-  width: 100vw;
+  text-align: center;
   height: 15vh;
   display: block;
-  background-image: url(assets/blasonWild.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.logo-wild {
-  height: 14vh;
 }
 
 /*footer tete pierre*/
@@ -56,12 +49,21 @@ nav {
   display: grid;
   grid-template-rows: 15vh 8vh 20vh 40vh;
   grid-template-columns: repeat(
-    4,
+    3,
     10px 300px 10px
-  ); /*4 fois 3 columnes de 10px 300px 10px)*/
+  ); /*3 fois 3 columnes de 10px 300px 10px)*/
   text-align: center;
   grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
   -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
+}
+
+.index {
+  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
+  background-image: url(assets/blasonWild.png),
+    url(assets/blasonWild.png), url(assets/blasonWild.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 70px, 390px, 710px;
 }
 
 .bubble-text {
@@ -149,107 +151,3 @@ h3 {
   margin-top: 33, 3%;
 }
 
-/*page dojo*/
-
-.dojo {
-  display: flex;
-  justify-content: space-evenly;
-
-  text-align: center;
-}
-
-#grid-dojo {
-  display: grid;
-  grid-template-columns: 1fr 20vw 1fr;
-  grid-template-rows: 1fr;
-  z-index: 1;
-  text-align: center;
-  padding: 3%;
-}
-
-.dojo-text {
-  width: 90%;
-  background-image: url(assets/bullemobi.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: black;
-  font-size: 1.2vw;
-  text-align: center;
-  grid-area: 1/1/2/2;
-  justify-self: center;
-}
-
-.pierre-dojo {
-  grid-area: 1/2/2/3;
-  width: 30vw;
-  justify-self: center;
-}
-
-/*button pacement for screen*/
-
-#grid-button {
-  grid-area: 1/1/2/2;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 10% 10% 10% 6fr;
-  z-index: 2;
-}
-.play {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-/*row-start/column-start/row-end/column-end*/
-#one {
-  grid-area: 2/2/3/3;
-  background-image: url(assets/beer.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#two {
-  grid-area: 2/3/3/4;
-  background-image: url(assets/tacos.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#three {
-  grid-area: 2/4/3/5;
-  background-image: url(assets/nyanCat.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#four {
-  grid-area: 3/2/4/3;
-  background-image: url(assets/logoLol.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#five {
-  grid-area: 3/3/4/4;
-  background-image: url(assets/hacker.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#six {
-  grid-area: 3/4/4/5;
-  background-image: url(assets/pillow.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#result {
-  grid-area: 4/2/5/5;
-  color: black;
-  font-size: 1.5vw;
-}
