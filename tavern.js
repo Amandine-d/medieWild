@@ -27,7 +27,7 @@ const finalGameVictoryMessage = document.querySelector(
   ".final-game-victory-message"
 );
 const startChallenge = document.querySelector(".start-challenge");
-const rejectChallenge = document.querySelector(".reject-challenge");
+const skipChallenge = document.querySelector(".skip-challenge");
 const challenge = document.querySelector(".challenge");
 const sandraTagScore = document.querySelector(".sandra-tag-score");
 const playerTagScore = document.querySelector(".player-tag-score");
@@ -59,10 +59,10 @@ function transformRandom() {
   }
 }
 function openChallengeDiv() {
-  challenge.classList.remove("challenge-open");
-  sandraTagScore.classList.add("sandra-tag-score-open");
-  playerTagScore.classList.add("player-tag-score-open");
-  playerChoiceContainer.classList.add("player-choice-container-open");
+  challenge.classList.remove("open");
+  sandraTagScore.classList.add("open");
+  playerTagScore.classList.add("open");
+  playerChoiceContainer.classList.add("open");
 }
 
 startChallenge.addEventListener("click", openChallengeDiv);
@@ -82,6 +82,7 @@ for (let i = 0; i < choice.length; i++) {
     tryWinner();
     tryVictoryMessage();
     checkGameWinner();
+    gameVictoryMessage();
     console.log(sandra.winCounter);
     console.log(player.winCounter);
   }
@@ -133,30 +134,30 @@ function checkGameWinner() {
 
 //battle message animation shii fuu mii
 function battleMessage() {
-  playerChoiceContainer.classList.remove("player-choice-container-open");
-  combatMessageContainer.classList.add("combat-message-container-open");
-  shi.classList.add("shi-open");
-  shi.classList.remove("shi-open");
-  fu.classList.add("fu-open");
-  fu.classList.remove("fu-open");
-  mi.classList.add("mi-open");
-  mi.classList.remove("mi-open");
-  combatMessageContainer.classList.remove("combat-message-container-open");
+  playerChoiceContainer.classList.remove("open");
+  combatMessageContainer.classList.add("open");
+  shi.classList.add("open");
+  shi.classList.remove("open");
+  fu.classList.add("open");
+  fu.classList.remove("open");
+  mi.classList.add("open");
+  mi.classList.remove("open");
+  combatMessageContainer.classList.remove("open");
 }
 
 // try victory message with hand result function need to be finished (hands need to link the choice)
 
 function tryVictoryMessage() {
   tryVictoryMessageContainer.classList.add(
-    "try-victory-message-container-open"
+    "open"
   );
   tryVictoryMessageContainer.classList.remove(
-    "try-victory-message-container-open"
+    "open"
   );
-  playerChoiceContainer.classList.add("player-choice-container-open");
+  playerChoiceContainer.classList.add("open");
 }
 
 function gameVictoryMessage(){
-  gameVictoryMessageContainer.classList.add(".game-victory-message-container-open");
-  gameVictoryMessageContainer.classList.remove(".game-victory-message-container-open");
+  gameVictoryMessageContainer.classList.add(".open");
+  gameVictoryMessageContainer.classList.remove(".open");
 }
