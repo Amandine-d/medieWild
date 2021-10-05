@@ -1,14 +1,9 @@
 
 
 /*start of shifoumi properties*/
-.open{
-  display: block;
-}
-.close{
-  display: none;
-}
+
 .challenge{
-  display: block;
+  display: none;
 }
 
 .skip-message {
@@ -38,8 +33,7 @@
 
 .shi {
   display: none;
-  /* width: 90vh;
-  height: 25vh; */
+
 }
 
 .fu {
@@ -60,6 +54,9 @@
 
 .retry-challenge-message{
   display: none;
+}
+.open{
+  display: grid;
 }
 
 @keyframes apparition {

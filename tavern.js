@@ -59,7 +59,7 @@ function transformRandom() {
   }
 }
 function openChallengeDiv() {
-  challenge.classList.add("close");
+  challenge.classList.remove("open");
   sandraTagScore.classList.add("open");
   playerTagScore.classList.add("open");
   playerChoiceContainer.classList.add("open");
