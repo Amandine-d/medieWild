@@ -1,10 +1,9 @@
 /*sur toutes les pages */
 
 body {
-  background: linear-gradient(to bottom right, black, rgb(69, 70, 70) );
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
-  /*max-width: 320px;*/
-  /*max-height: 568px;*/
+  /*max-height: 812px;*/
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -17,23 +16,12 @@ header {
   display: block;
 }
 
-.index {
-  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
-  background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
-    url(assets/blasonWild.png), url(assets/blasonWild.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 70px, 390px, 710px, 1030px;
-}
-
-
-
 /*footer tete pierre*/
 
 nav {
   display: flex;
   justify-content: right;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-items: flex-end;
 }
 
@@ -61,14 +49,22 @@ nav {
   display: grid;
   grid-template-rows: 15vh 8vh 20vh 40vh;
   grid-template-columns: repeat(
-    4,
+    3,
     10px 300px 10px
-  ); /*4 fois 3 columnes de 10px 300px 10px)*/
+  ); /*3 fois 3 columnes de 10px 300px 10px)*/
   text-align: center;
   grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
   -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
+.index {
+  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
+  background-image: url(assets/blasonWild.png),
+    url(assets/blasonWild.png), url(assets/blasonWild.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 70px, 390px, 710px;
+}
 
 .bubble-text {
   z-index: 3;
@@ -129,7 +125,7 @@ nav {
   z-index: 1;
 }
 
-/*attention balises titres modifiées jusque h4*/
+/*attention balises titres modifiées jusque h3*/
 
 h1 {
   font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
@@ -155,10 +151,3 @@ h3 {
   margin-top: 33, 3%;
 }
 
-h4 {
-  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 16px;
-  grid-area: 2/11/3/12;
-  margin-top: 33, 3%;
-}
