@@ -1,5 +1,4 @@
 const result = document.getElementById("result");
-//result.readOnly = true; //empeche d'ecrire ds mon input resultats
 
 //function choisir un nombre entier random
 function getRandomIntInclusive(min, max) {
