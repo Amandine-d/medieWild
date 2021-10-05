@@ -34,8 +34,8 @@ const playerTagScore = document.querySelector(".player-tag-score");
 const playerChoiceContainer = document.querySelector(
   ".player-choice-container"
 );
-const sandraScore = document.querySelector("#sandra-score");
-const playerScore = document.querySelector("#player-score");
+const sandraScore = document.querySelector(".sandra-score");
+const playerScore = document.querySelector(".player-score");
 const combatMessageContainer = document.querySelector(
   ".combat-message-container"
 );
@@ -59,7 +59,7 @@ function transformRandom() {
   }
 }
 function openChallengeDiv() {
-  challenge.classList.remove("open");
+  challenge.classList.add("close");
   sandraTagScore.classList.add("open");
   playerTagScore.classList.add("open");
   playerChoiceContainer.classList.add("open");

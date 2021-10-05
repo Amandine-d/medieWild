@@ -2,13 +2,13 @@
 
 /*start of shifoumi properties*/
 .open{
-  display: grid;
+  display: block;
 }
 .close{
   display: none;
 }
 .challenge{
-  display: grid;
+  display: block;
 }
 
 .skip-message {
