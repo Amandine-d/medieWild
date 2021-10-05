@@ -1,11 +1,20 @@
-.challenge{
-  display: block;
+
+
+/*start of shifoumi properties*/
+.open{
+  display: grid;
 }
-.challenge-closed{
+.close{
   display: none;
 }
+.challenge{
+  display: grid;
+}
 
-.reject-message {
+.skip-message {
+  display: none;
+}
+.skip-and-go{
   display: none;
 }
 
@@ -13,31 +22,18 @@
   display: none;
 }
 
-.sandra-tag-score-open{
-  display: block;
-}
 
 .player-tag-score {
   display: none;
 }
-.player-tag-score-open{
-  display: block;
-}
+
 
 .player-choice-container {
   display: none;
 }
 
-.player-choice-container-open{
-  display: block;
-}
-
 .combat-message-container{
   display: none;
-}
-
-.combat-message-container-open{
-  display: block;
 }
 
 .shi {
@@ -45,44 +41,26 @@
   /* width: 90vh;
   height: 25vh; */
 }
-.shi-open {
-  display: block;
-  opacity: 1;
-  /* animation-name: apparition;
-  animation-delay: 2s;
-  animation-duration: 3s; */
-}
 
 .fu {
   display: none;
-}
-.fu-open{
-  display: block;
 }
 
 .mi {
   display: none;
 }
-.mi-open{
-  display: block;
-}
-
+  
 .try-victory-message-container {
   display: none;
-}
-.try-victory-message-container-open{
-  display: block;
 }
 
 .game-victory-message-container {
   display: none;
 }
 
-.game-victory-message-container-open{
-  display: block;
+.retry-challenge-message{
+  display: none;
 }
-
-
 
 @keyframes apparition {
   0% {
@@ -92,3 +70,5 @@
     opacity: 1;
   }
 }
+
+/*end of shifumi properties*/
