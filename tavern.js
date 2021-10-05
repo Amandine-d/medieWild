@@ -45,6 +45,7 @@ const mi = document.querySelector(".mi");
 const tryVictoryMessageContainer = document.querySelector(
   ".try-victory-message-container"
 );
+const gameVictoryMessageContainer = document.querySelector(".game-victory-message-container");
 //  function transform random choice to rock scisors paper
 
 function transformRandom() {
@@ -58,7 +59,7 @@ function transformRandom() {
   }
 }
 function openChallengeDiv() {
-  challenge.classList.add("challenge-closed");
+  challenge.classList.remove("challenge-open");
   sandraTagScore.classList.add("sandra-tag-score-open");
   playerTagScore.classList.add("player-tag-score-open");
   playerChoiceContainer.classList.add("player-choice-container-open");
@@ -135,15 +136,15 @@ function battleMessage() {
   playerChoiceContainer.classList.remove("player-choice-container-open");
   combatMessageContainer.classList.add("combat-message-container-open");
   shi.classList.add("shi-open");
-  // shi.classList.remove("shi-open");
+  shi.classList.remove("shi-open");
   fu.classList.add("fu-open");
-  // fu.classList.remove("fu-open");
+  fu.classList.remove("fu-open");
   mi.classList.add("mi-open");
-  // mi.classList.remove("mi-open");
-  // combatMessageContainer.classList.remove("combat-message-container-open");
+  mi.classList.remove("mi-open");
+  combatMessageContainer.classList.remove("combat-message-container-open");
 }
 
-// try victory message with hand result function
+// try victory message with hand result function need to be finished (hands need to link the choice)
 
 function tryVictoryMessage() {
   tryVictoryMessageContainer.classList.add(
@@ -153,4 +154,9 @@ function tryVictoryMessage() {
     "try-victory-message-container-open"
   );
   playerChoiceContainer.classList.add("player-choice-container-open");
+}
+
+function gameVictoryMessage(){
+  gameVictoryMessageContainer.classList.add(".game-victory-message-container-open");
+  gameVictoryMessageContainer.classList.remove(".game-victory-message-container-open");
 }

@@ -1,8 +1,9 @@
+
 .challenge{
-  display: block;
-}
-.challenge-closed{
   display: none;
+}
+.challenge-open{
+  display: block;
 }
 
 .reject-message {
@@ -86,13 +87,13 @@
 .game-victory-message-container-open{
   display: block;
 }
+
 .retry-challenge-message{
   display: none;
 }
 .retry-challenge-message-open{
   display: block;
 }
-
 @keyframes apparition {
   0% {
     opacity: 0;
