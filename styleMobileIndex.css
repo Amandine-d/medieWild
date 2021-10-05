@@ -1,23 +1,12 @@
+/*sur toutes les pages */
+
 body {
-  background-color: black;
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
-  /*max-width: 320px;*/
-  max-height: 568px;
+  /*max-height: 812px;*/
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-rows: 15vh 8vh 20vh 40vh;
-  grid-template-columns: repeat(
-    4,
-    10px 300px 10px
-  ); /*4 fois 3 columnes de 10px 300px 10px)*/
-  text-align: center;
-  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
-  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
 header {
@@ -27,17 +16,54 @@ header {
   display: block;
 }
 
-.logo-wild {
-  height: 14vh;
+/*footer tete pierre*/
+
+nav {
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  justify-items: flex-end;
+}
+
+.nav-pierre {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-image: url(assets/bullefootermobi.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 20vh;
+  text-align: center;
+  color: black;
+}
+
+.floating-head {
+  background-color: transparent;
+  border: none;
+}
+/*footer tete pierre*/
+
+/*page index*/
+
+.grid-container-index {
+  display: grid;
+  grid-template-rows: 15vh 8vh 20vh 40vh;
+  grid-template-columns: repeat(
+    3,
+    10px 300px 10px
+  ); /*3 fois 3 columnes de 10px 300px 10px)*/
+  text-align: center;
+  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
+  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
 }
 
 .index {
   grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
-  background-image: url(assets/blasonWild.png), url(assets/blasonWild.png),
+  background-image: url(assets/blasonWild.png),
     url(assets/blasonWild.png), url(assets/blasonWild.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-x: 70px, 390px, 710px, 1030px;
+  background-position-x: 70px, 390px, 710px;
 }
 
 .bubble-text {
@@ -99,6 +125,8 @@ header {
   z-index: 1;
 }
 
+/*attention balises titres modifiées jusque h3*/
+
 h1 {
   font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
   text-align: center;
@@ -123,34 +151,3 @@ h3 {
   margin-top: 33, 3%;
 }
 
-h4 {
-  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 16px;
-  grid-area: 2/11/3/12;
-  margin-top: 33, 3%;
-}
-
-nav {
-  display: flex;
-  justify-content: right;
-  align-items:flex-start;
-  justify-items: flex-end;
-}
-
-.nav-pierre {
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  background-image: url(assets/bullefootermobi.png);
-  background-size: 200px;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 20vh;
-  text-align: center;
-  color: black;
-}
-
-.floating-head {
-  background-color: transparent;
-  border: none;
-}

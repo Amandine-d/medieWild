@@ -10,19 +10,40 @@
       href="https://fonts.googleapis.com/css2?family=Cookie&family=Ubuntu&family=Uncial+Antiqua&display=swap"
       rel="stylesheet"
     />
-    <link href="styleMobile.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
+    <link href="styleMobileDojo.css" rel="stylesheet" type="text/css" media="screen and (max-width: 568px)" />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen and (min-width: 568px)" />
+    <script defer src="dojo.js"></script>
   </head>
   <body>
 
     <header>
-      <img
-        src="assets/blasonWild.png"
-        alt="logo"
-        class="logo-wild"
-      />
+      
     </header>
-    <div></div>
+    <h1>DOJO</h1>
+    <div class="dojo">
+      <img src="assets/dojopx.png" alt="dojo" class="dojo-pixel" width="40%"/>
+      <p>Welcome to the Dojo! <br>You will challenge Pierre in a guessing game</p>
+    </div>
+    <div id="grid-dojo">
+      <div id="grid-button">
+        <button id="one" class="play" value="1"></button>
+        <button id="two" class="play" value="2"> </button>
+        <button id="three" class="play" value="3"> </button>
+        <button id="four" class="play" value="4"></button>
+        <button id="five" class="play" value="5"> </button>
+        <button id="six" class="play" value="6"> </button>
+        <p id="result" ></p>
+      </div>
+      <p class="dojo-text">
+        <br />Let's play a game! <br />Guess what I'm thinking?
+      </p>
+      <img
+        src="assets/avatarPierre.png"
+        alt="avatarPierre"
+        class="pierre-dojo"
+        
+      />
+    </div>
 
     <footer>
       <nav>

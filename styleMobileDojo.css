@@ -3,6 +3,8 @@
 body {
   background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
+  /*max-width: 320px;*/
+  /*max-height: 568px;*/
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -17,10 +19,6 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-
-.logo-wild {
-  height: 14vh;
 }
 
 /*footer tete pierre*/
@@ -50,80 +48,7 @@ nav {
 }
 /*footer tete pierre*/
 
-/*page index*/
-
-.grid-container-index {
-  display: grid;
-  grid-template-rows: 15vh 8vh 20vh 40vh;
-  grid-template-columns: repeat(
-    4,
-    10px 300px 10px
-  ); /*4 fois 3 columnes de 10px 300px 10px)*/
-  text-align: center;
-  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
-  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
-}
-
-.bubble-text {
-  z-index: 3;
-  color: black;
-  font-size: 12px;
-  display: block;
-  width: 180px;
-  height: 80px;
-  text-align: center;
-  padding: 8px;
-}
-
-#bubblePierre {
-  grid-area: 3 / 2 / 4 / 3;
-}
-
-#bubbleXavier {
-  grid-area: 3 / 5 / 4 / 6;
-}
-
-#bubbleSandra {
-  grid-area: 3 / 8 / 4 / 9;
-}
-
-.bubble-pierre {
-  width: 200px;
-  grid-area: 3 / 2 / 4 / 3;
-  z-index: 2;
-}
-
-.bubble-xavier {
-  width: 200px;
-  grid-area: 3 / 5 / 4 / 6;
-  z-index: 2;
-}
-
-.bubble-sandra {
-  width: 200px;
-  grid-area: 3 / 8 / 4 / 9;
-  z-index: 2;
-}
-
-.avatar-pierre {
-  height: 300px;
-  grid-row-start: 3;
-  z-index: 1;
-}
-
-.avatar-xavier {
-  height: 300px;
-  grid-area: 3 / 5 / 5 / 6;
-  z-index: 1;
-}
-
-.avatar-sandra {
-  height: 300px;
-  grid-area: 3 / 8 / 5 / 9;
-  z-index: 1;
-}
-
-/*attention balises titres modifiées jusque h3*/
+/*page dojo*/
 
 h1 {
   font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
@@ -133,34 +58,17 @@ h1 {
   margin-top: 33, 3%;
 }
 
-h2 {
-  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 16px;
-  grid-area: 2/5/3/6;
-  margin-top: 33, 3%;
-}
-
-h3 {
-  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 16px;
-  grid-area: 2/8/3/9;
-  margin-top: 33, 3%;
-}
-
-/*page dojo*/
-
 .dojo {
   display: flex;
   justify-content: space-evenly;
-
+  padding: 2vh;
   text-align: center;
+  font-size: 2.5vw;
 }
 
 #grid-dojo {
   display: grid;
-  grid-template-columns: 1fr 20vw 1fr;
+  grid-template-columns: 60% 30%;
   grid-template-rows: 1fr;
   z-index: 1;
   text-align: center;
@@ -168,12 +76,12 @@ h3 {
 }
 
 .dojo-text {
-  width: 90%;
-  background-image: url(assets/bullemobi.png);
+  width: 100%;
+    background-image: url(assets/bullemobi.png);
   background-repeat: no-repeat;
   background-size: contain;
   color: black;
-  font-size: 1.2vw;
+  font-size: 2vw;
   text-align: center;
   grid-area: 1/1/2/2;
   justify-self: center;
@@ -181,7 +89,7 @@ h3 {
 
 .pierre-dojo {
   grid-area: 1/2/2/3;
-  width: 30vw;
+  width: 60vw;
   justify-self: center;
 }
 
@@ -190,18 +98,23 @@ h3 {
 #grid-button {
   grid-area: 1/1/2/2;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 10% 10% 10% 6fr;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 15% 10% 10% 10% 6fr;
   z-index: 2;
 }
 .play {
   border-color: transparent;
   background-color: transparent;
+  height: 5vh;
 }
-
+#result {
+  grid-area: 4/2/5/5;
+  color: black;
+  font-size: 1vw;
+}
 /*row-start/column-start/row-end/column-end*/
 #one {
-  grid-area: 2/2/3/3;
+  grid-area: 2/1/3/2;
   background-image: url(assets/beer.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -209,7 +122,7 @@ h3 {
 }
 
 #two {
-  grid-area: 2/3/3/4;
+  grid-area: 2/2/3/3;
   background-image: url(assets/tacos.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -217,7 +130,7 @@ h3 {
 }
 
 #three {
-  grid-area: 2/4/3/5;
+  grid-area: 2/3/3/4;
   background-image: url(assets/nyanCat.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -225,7 +138,7 @@ h3 {
 }
 
 #four {
-  grid-area: 3/2/4/3;
+  grid-area: 3/1/4/2;
   background-image: url(assets/logoLol.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -233,7 +146,7 @@ h3 {
 }
 
 #five {
-  grid-area: 3/3/4/4;
+  grid-area: 3/2/4/3;
   background-image: url(assets/hacker.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -241,7 +154,7 @@ h3 {
 }
 
 #six {
-  grid-area: 3/4/4/5;
+  grid-area: 3/3/4/4;
   background-image: url(assets/pillow.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -249,7 +162,8 @@ h3 {
 }
 
 #result {
-  grid-area: 4/2/5/5;
+  grid-area: 4/1/5/4;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3vw;
+  text-align: center;
 }
