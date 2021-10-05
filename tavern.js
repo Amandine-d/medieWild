@@ -67,7 +67,7 @@ function openChallengeDiv() {
 startChallenge.addEventListener("click", openChallengeDiv);
 startChallenge.addEventListener("touch", openChallengeDiv);
 
-//click and touch event choice
+//main click and touch event player choice
 
 for (let i = 0; i < choice.length; i++) {
   function fillPlayerChoice() {
@@ -149,6 +149,8 @@ function tryVictoryMessage() {
   tryVictoryMessageContainer.classList.add(
     "try-victory-message-container-open"
   );
-  // tryVictoryMessageContainer.classList.remove("try-victory-message-container-open");
+  tryVictoryMessageContainer.classList.remove(
+    "try-victory-message-container-open"
+  );
   playerChoiceContainer.classList.add("player-choice-container-open");
 }

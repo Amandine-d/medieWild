@@ -8,7 +8,12 @@
 .reject-message {
   display: none;
 }
-
+.skip-and-go{
+  display: none;
+}
+.skip-and-go-open{
+  display: block;
+}
 .sandra-tag-score {
   display: none;
 }
@@ -81,8 +86,12 @@
 .game-victory-message-container-open{
   display: block;
 }
-
-
+.retry-challenge-message{
+  display: none;
+}
+.retry-challenge-message-open{
+  display: block;
+}
 
 @keyframes apparition {
   0% {
