@@ -3,8 +3,7 @@
 body {
   background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
-  /*max-width: 320px;*/
-  /*max-height: 568px;*/
+  min-height: 100vh;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -61,7 +60,7 @@ h1 {
 .dojo {
   display: flex;
   justify-content: space-evenly;
-  padding: 2vh;
+  align-items: center;
   text-align: center;
   font-size: 2.5vw;
 }

@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gymnasium-game</title>
-    <link href = "gymnasium.css" rel = "stylesheet" type = "text/css" />
-
-    <script defer src = "gymnasium-game.js"></script>
-</head>
-<body>
-
-
-    
-    <div class = "container">
-        <div id = "question-container" class = "hide">
-            <div id = "question">Question</div>
-            <div id = "answer-buttons" class = "btn-grid">
-                <button class = "btn">Answer 1</button>
-                <button class = "btn">Answer 2</button>                
-                <button class = "btn">Answer 3</button>
-                <button class = "btn">Answer 4</button>                                
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedieWild</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Ubuntu&family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="style.css"
+      rel="stylesheet"
+      type="text/css"
+     
+    />
+    <script defer src="gymnasium.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <h1>Gymnasium</h1>
+    <div class="grid-gym">
+      <table>
+        <tr>
+          <td><img src="assets/cyriac.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><img src="assets/peter.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/sidney.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/amandine.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/florian.png" alt="promo" class="promo" /><img src="assets/ghislain.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/enzo.png" alt="promo" class="promo" /><img src="assets/greg.png" alt="promo" class="promo" /><img src="assets/nicolas.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/avatarFanny.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/paco.png" alt="promo" class="promo" /><img src="assets/edouard.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td><img src="assets/davy.png" alt="promo" class="promo" /></td>
+        </tr>
+        <tr>
+          <td class="ladder-bottom"></td>
+        </tr>
+      </table>
+      <img src="assets/gymnasium.png" alt="gym" class="gym-pixel" />
+      <p class="gym">
+        <img
+          src="assets/avatarXavierHead.png"
+          alt="xavier"
+          class="xavier-gym"
+          Welcome
+          to
+          the
+          Gym!
+        />
+        <br />You will train with Xavier in a Kahoot!
+      </p>
+      <nav class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
         </div>
-        <div class = "controls">
-            <button id ="start-btn" class = "start-btn btn">Start</button>
-            <button id = "next-btn" class = "next-btn btn hide">Next</button>
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start</button>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
+      </nav>
     </div>
-
-</body>
+  </body>
 </html>

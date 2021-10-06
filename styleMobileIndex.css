@@ -3,7 +3,8 @@
 body {
   background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
-  /*max-height: 812px;*/
+  min-height: 100vh;
+  min-width: 880px;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
