@@ -347,7 +347,7 @@ td {
 
 .btn {
   border: 1px solid rgba(32, 94, 11, 0.063);
-  background-color: #f45c45;
+  background-color: blue;
   border-radius: 5px;
   padding: 5px 10px;
   color: antiquewhite;
@@ -361,9 +361,8 @@ td {
   background-color: green;
 }
 
-.btn-wrong {
-  background-color: red;
-}
+
+
 
 .start-btn,
 .next-btn {
@@ -383,12 +382,22 @@ td {
   display: none;
 }
 
-/*anciennement body.correct, a changer ds js*/
 
-nav.correct {
+button.correct {
   background-color: rgb(84, 173, 84);
 }
 
-nav.wrong {
+button.wrong {
   background-color: rgb(184, 78, 78);
+}
+
+body.correct {
+  background: greenyellow;
+  background-color: green;
+  color: goldenrod;
+}
+body.wrong {
+  background: rgb(34, 3, 3);
+  background-color: rebeccapurple;
+  color: red;
 }
