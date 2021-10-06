@@ -6,6 +6,7 @@ body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
+  min-height: 100vh;
 }
 
 header {
@@ -154,7 +155,7 @@ h3 {
 .dojo {
   display: flex;
   justify-content: space-evenly;
-
+  align-items: center;
   text-align: center;
 }
 
@@ -185,7 +186,7 @@ h3 {
   justify-self: center;
 }
 
-/*button pacement for screen*/
+/*button placement for screen*/
 
 #grid-button {
   grid-area: 1/1/2/2;
@@ -252,4 +253,142 @@ h3 {
   grid-area: 4/2/5/5;
   color: black;
   font-size: 1.5vw;
+}
+
+/*page gym*/
+
+.grid-gym {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50vh 1fr;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.gym-pixel {
+  grid-area: 1/2/2/3;
+  max-height: 50vh;
+  max-width: 60vw;
+}
+
+.gym {
+  grid-area: 1/3/2/4;
+  max-height: 50vh;
+}
+
+@media screen and (max-width: 568px) {
+  .gym-pixel {
+    grid-area: 1/2/2/4;
+    max-height: 45%;
+    width: 60vw;
+    align-self: start;
+  }
+  .gym {
+    grid-area: 1/2/2/4;
+    justify-items: center;
+    align-self: end;    
+  }
+  .xavier-gym{
+    grid-area: 1/2/2/4;
+    justify-items: center;
+    align-self: end;    
+    height: 20vh;
+  }
+}
+
+table {
+  grid-area: 1/1/3/2;
+  border-style: solid;
+  border-color: chocolate;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-width: 5px;
+}
+
+td {
+  border-bottom-style: solid;
+  border-bottom-color: chocolate;
+  border-width: 5px;
+  width: 20vw;
+  height: 8vh;
+}
+
+.ladder-bottom {
+  border-bottom: transparent;
+}
+
+.promo {
+  height: 8vh;
+}
+
+.xavier-gym {
+  max-height: 40vh;
+}
+
+/*css gym Amandine*/
+
+.container {
+  grid-area: 2/2/3/4;
+  width: 50vw;
+  max-width: 80%;
+  /*arrondit les angles */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 20px 5px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  border: 1px solid rgba(32, 94, 11, 0.063);
+  background-color: blue;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: antiquewhite;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.answer.correct {
+  background-color: green;
+}
+
+.btn-wrong {
+  background-color: red;
+}
+
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.hide {
+  display: none;
+}
+
+/*anciennement body.correct, a changer ds js*/
+
+nav.correct {
+  background-color: rgb(84, 173, 84);
+}
+
+nav.wrong {
+  background-color: rgb(184, 78, 78);
 }
