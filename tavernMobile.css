@@ -156,7 +156,30 @@ header {
   display: none;
   
 }
-  
+
+.sandra-hand-animation{
+  background-image: url(assets/sandraRockColored.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-color: transparent;
+  width:20%;
+  height: 90%;
+  display: none;
+}
+.player-hand-animation{
+  background-image: url(assets/playerRock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-color: transparent;
+  width:20%;
+  height: 90%;
+  display: none;
+}  
+
 .try-victory-message-container {
   background-image: url(assets/woodenSign.png);
   border-color: transparent;

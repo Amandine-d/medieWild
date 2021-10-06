@@ -57,7 +57,8 @@ const retryMessageContainer = document.querySelector(
 const retryChallenge = document.querySelector(".retry-challenge");
 const skipRetryChallenge = document.querySelector(".skip-retry-challenge");
 const finalTavernContainer = document.querySelector(".final-tavern-container");
-
+const sandraHandAnimation = document.querySelector(".sandra-hand-animation");
+const playerHandAnimation = document.querySelector(".player-hand-animation");
 //  function transform random choice to rock scisors paper
 
 function transformRandom() {
@@ -227,7 +228,7 @@ function checkGameWinner() {
       tryVictoryMessageContainer.classList.remove("open");
       gameVictoryMessageContainer.classList.add("open");
       retryMessageContainer.classList.add("open");
-    }, 5000);
+    }, 4000);
   } else if (player.winCounter === 3) {
     finalGameVictoryMessage.innerHTML = `${player.gameVictoryMessage}`;
     whoWon.classList.add("who-won-player");
@@ -243,7 +244,7 @@ function checkGameWinner() {
       tryVictoryMessageContainer.classList.remove("open");
       gameVictoryMessageContainer.classList.add("open");
       retryMessageContainer.classList.add("open");
-    }, 5000);
+    }, 4000);
   }
 }
 
@@ -259,32 +260,44 @@ function fillTryVictoryMessageHands() {
 function battleMessage() {
   playerChoiceContainer.classList.remove("open");
   combatMessageContainer.classList.add("open");
-  shi.classList.add("open", "slide-in");
+  shi.classList.add("open", /*"slide-in"*/);
+  sandraHandAnimation.classList.add("open");
+  playerHandAnimation.classList.add("open");
   setTimeout(function () {
     shi.classList.remove("open");
-  }, 750);
+    sandraHandAnimation.classList.remove("open");
+    playerHandAnimation.classList.remove("open");
+  }, 500);
   setTimeout(function () {
-    fu.classList.add("open", "slide-in");
-  }, 1500);
+    fu.classList.add("open", /*"slide-in"*/);
+    sandraHandAnimation.classList.add("open");
+    playerHandAnimation.classList.add("open");
+  }, 1000);
   setTimeout(function () {
     fu.classList.remove("open");
-  }, 2250);
+    sandraHandAnimation.classList.remove("open");
+    playerHandAnimation.classList.remove("open");
+  }, 1500);
   setTimeout(function () {
-    mi.classList.add("open", "slide-in");
-  }, 3000);
+    mi.classList.add("open", /*"slide-in"*/);
+    sandraHandAnimation.classList.add("open");
+  playerHandAnimation.classList.add("open");
+  }, 2000);
   setTimeout(function () {
     mi.classList.remove("open");
-  }, 3750);
+    sandraHandAnimation.classList.remove("open");
+    playerHandAnimation.classList.remove("open");
+  }, 2750);
   setTimeout(function () {
     combatMessageContainer.classList.remove("open");
-  }, 3750);
+  }, 2750);
   setTimeout(function () {
     tryVictoryMessageContainer.classList.add("open");
-  }, 3750);
+  }, 2750);
   setTimeout(function () {
     tryVictoryMessageContainer.classList.remove("open");
-  }, 5000);
+  }, 4000);
   setTimeout(function () {
     playerChoiceContainer.classList.add("open");
-  }, 5000);
+  }, 4000);
 }
