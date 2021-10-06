@@ -56,7 +56,7 @@ const retryMessageContainer = document.querySelector(
 );
 const retryChallenge = document.querySelector(".retry-challenge");
 const skipRetryChallenge = document.querySelector(".skip-retry-challenge");
-const finalTavernContainer = document.querySelector("final-tavern-container");
+const finalTavernContainer = document.querySelector(".final-tavern-container");
 
 //  function transform random choice to rock scisors paper
 

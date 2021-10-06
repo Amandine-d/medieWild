@@ -30,9 +30,13 @@ header {
 }
 .tavern-image{
   display: none;
+  height: 100%;
+  width: 100%;
 }
 .tavern-description{
   display: none;
+  height: 50%;
+  width: 100%;
 }
 
 /*final tavern page content end*/
