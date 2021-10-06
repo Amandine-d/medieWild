@@ -1,70 +1,277 @@
+/*sur toutes les pages */
 
+body {
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
+  color: white;
+  /*max-width: 320px;*/
+  /*max-height: 568px;*/
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
 
-/*start of shifoumi properties*/
+header {
+  background-color: #f45c45;
+  width: 100vw;
+  height: 15vh;
+  display: block;
+  background-image: url(assets/blasonWild.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/*Final tavern page content start */
+
+.final-tavern-container{
+  display: none;
+  height: 90vh;
+  width: 95vw; 
+  justify-content: space-around;
+}
+.tavern-image{
+  display: none;
+}
+.tavern-description{
+  display: none;
+}
+
+/*final tavern page content end*/
+/*start of shifumi properties*/
+#paper{
+  background-image: url(assets/playerPaper.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#rock{
+  background-image: url(assets/playerRock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#scissors{
+  background-image: url(assets/playerScissors.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .challenge{
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
 }
-
+.start-challenge{
+  display: none;
+}
+.skip-challenge{
+  display: none;
+} 
+.skip-message-container{
+  display: none;
+  height: 90vh;
+  width: 95vw; 
+  justify-content: space-around;
+}
 .skip-message {
   display: none;
 }
-.skip-and-go{
+.wait-please{
   display: none;
+}
+.coffee-timer{
+  display:none;
 }
 
 .sandra-tag-score {
+  background-image: url(assets/scoreBoarLeft.png);
+  border-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
 }
 
-
 .player-tag-score {
+  background-image: url(assets/scoreBoardRight.png);
+  border-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
+
 }
 
 
 .player-choice-container {
+  background-image: url(assets/woodenSign.png);
+  border-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
 }
 
+.player-choice{
+  width:20%;
+  height: 90%;
+  border-color: transparent;
+  background-color: transparent;
+}
 .combat-message-container{
+  background-image: url(assets/woodenSign.png);
+  border-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
 }
 
 .shi {
   display: none;
-
-}
+} 
 
 .fu {
   display: none;
+  
 }
 
 .mi {
   display: none;
+  
 }
   
 .try-victory-message-container {
+  background-image: url(assets/woodenSign.png);
+  border-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
+  height: 30vh;
+  width: 95vw; 
+  justify-content: space-around;
 }
-
+.sandra-hand{
+  display: block;
+  width:20%;
+  height: 50%;
+  border-color: transparent;
+  background-color: transparent;
+}
+.sandra-hand-paper{
+  background-image: url(assets/sandraPaperColored.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sandra-hand-rock{
+  background-image: url(assets/sandraRockColored.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sandra-hand-scissors{
+  background-image: url(assets/sandraScissorsColored.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.player-hand{
+  display: block;
+  width:20%;
+  height: 50%;
+  border-color: transparent;
+  background-color: transparent;
+}
+.player-hand-paper{
+  background-image: url(assets/playerPaper.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.player-hand-rock{
+  background-image: url(assets/playerRock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.player-hand-scissors{
+  background-image: url(assets/playerScissors.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .game-victory-message-container {
+  background-image: url(assets/tavernSign.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
+  height: 60vh;
+  width: 95vw; 
+  justify-content: space-around;
+}
+.who-won{
+  display: block;
+  height: 50%;
+  width: 90%;
+  border-color: transparent;
+  background-color: transparent;
 }
 
+.who-won-sandra{
+  background-image: url(assets/crownSandra.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.who-won-player{
+  background-image: url(assets/crownPlayer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.retry-message-container{
+  display: none;
+}
 .retry-challenge-message{
   display: none;
 }
-.open{
-  display: grid;
+.retry-challenge{
+  display: none;
 }
-
-@keyframes apparition {
-  0% {
-    opacity: 0;
+.skip-retry-challenge{
+  display: none;
+}
+.slide-in{
+  animation-duration: 750ms;
+  animation-name: slidein;
+}
+.open{
+  display: flex;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
-  100% {
-    opacity: 1;
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
