@@ -197,7 +197,7 @@ function tryWinner() {
     if (sandra.winCounter !== 0) {
       setTimeout(function () {
         sandraScore.innerHTML = `${sandra.winCounter}`;
-      }, 3800);
+      }, 2800);
     }
   } else {
     whoWins.innerHTML = `${player.tryVictoryMessage}`;
@@ -205,7 +205,7 @@ function tryWinner() {
     if (player.winCounter !== 0) {
       setTimeout(function () {
         playerScore.innerHTML = `${player.winCounter}`;
-      }, 3850);
+      }, 2800);
     }
   }
 }
