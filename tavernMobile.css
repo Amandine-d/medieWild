@@ -23,19 +23,21 @@ header {
 }
 .tavern{
   display: grid;
-  grid-row: 1fr, repeat(3,33fr);
-  grid-column: repeat(10, 10fr);
+  height: 65vh;
+  width: 100vw;
+  
 }
+
 /*sandra background*/
 .avatar-sandra {
-  grid-row: 2, 3;
-  grid-column: 5, 10;
-  height: 300px;
+  grid-row: 2 / 4;
+  grid-column: 3 / 4;
+  height: 100px;
+  /* display: none; */
 }
 .bubble-sandra {
-  width: 200px;
-  grid-area: 3 / 8 / 4 / 9;
-  z-index: 2;
+  width: 300px;
+  display: none;
 }
 
 
@@ -84,6 +86,7 @@ header {
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
+  z-index: 1;
 }
 .challenge-message{
   display: flex;
