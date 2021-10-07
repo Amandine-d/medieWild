@@ -1,4 +1,4 @@
-/*Start: 1 bouton
+*Start: 1 bouton
 1ere question: Changer le fond ou les boutons si la reponse est correcte ou fausse
 2eme question: reset
 Compter le nombre de reponses justes 
@@ -14,37 +14,46 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions
 let currentQuestionIndex
 const maxQuestions = 4;
-let numberQuestion = 0
 
+//When we click sur start : execute the code that's inside statGame
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
-  numberQuestion++
-
   setNextQuestion()
 })
 
+
+//When we atart the game
 function startGame() {
+    //Hide the start button once clicked
   startButton.classList.add('hide')
+    //question.sort: if it's sorted - or + it's going to be sorted a certain way. Math random will give a number between 1 and 0.
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
+    //we  remove the hide class on the questions' container to see it
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
 
 function setNextQuestion() {
   resetState()
+    //Create a function to show the random question at the current question index
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+
 function showQuestion(question) {
+    //go inside the function question to ckeck to question
   questionElement.innerText = question.question
+      //Create button answer on text
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     //Create button answer on text
     button.innerText = answer.text
+        //We need to add the button class to it so we can click on it
     button.classList.add('btn')
     if (answer.correct) {
+            //we need to add a data attribute to our button
       button.dataset.correct = answer.correct
     }
     button.addEventListener('click', selectAnswer)
@@ -54,6 +63,7 @@ function showQuestion(question) {
 
 function resetState() {
   clearStatusClass(document.body)
+    //remove the button if it's not need. ie: if it's a 2answers question instead of 44
   nextButton.classList.add('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -61,20 +71,24 @@ function resetState() {
 }
 
 function selectAnswer(e) {
+    //e.target =  button we click on
   const selectedButton = e.target
+    //we need to ckeck thedataset of correct
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
+
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
-   if(maxQuestions < numberQuestion) {
+   if(maxQuestions < currentQuestionIndex) {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
-    endGame()
-    //Afficher ici pour aller au gymnase
+    numberQuestion = 0;
+    correctAnswerUser = 0;
     
    }
    else {
+     //Fait apparaitre le next button
     nextButton.classList.remove('hide')
   }
 }
@@ -112,7 +126,7 @@ const questions = [
       answers: [
           {text:"Talent Week", correct: true},
           {text:"Business Development", correct: false },
-          {text:"unefined", correct: false},  
+          {text:"undefined", correct: false},  
           {text:"Give an experience", correct: false },
       ],
   },
@@ -237,6 +251,7 @@ const questions = [
       ]
   }
   ]
+
 
   /*footer pierre*/
 
