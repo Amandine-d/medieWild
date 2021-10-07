@@ -1,8 +1,10 @@
-const menuContainer = document.querySelector('.menu-container');
-const menuItem = document.querySelector('.menu-item');
-const menuPierre = document.querySelector('.menu-pierre')
+const audio = new Audio('assets/scream.mp3');
+const bubbleContainer = document.querySelector('.nav-pierre');
+
+const menuPierre = document.querySelector('.floating-head')
 
 menuPierre.addEventListener('click', function() {
-    menuContainer.classList.toggle('active');
+    bubbleContainer.classList.toggle('active');
+    audio.play()
 
-})
+});
