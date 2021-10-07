@@ -161,3 +161,13 @@ function gameVictoryMessage(){
   gameVictoryMessageContainer.classList.add(".open");
   gameVictoryMessageContainer.classList.remove(".open");
 }
+
+/* footer pierre*/
+const bubbleContainer = document.querySelector('.nav-pierre');
+
+const menuPierre = document.querySelector('.floating-head')
+
+menuPierre.addEventListener('click', function() {
+    bubbleContainer.classList.toggle('active');
+
+})
