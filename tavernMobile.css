@@ -8,6 +8,7 @@ body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
+ 
 }
 
 header {
@@ -20,6 +21,24 @@ header {
   background-size: contain;
   background-position: center;
 }
+.tavern{
+  display: grid;
+  grid-row: 1fr, repeat(3,33fr);
+  grid-column: repeat(10, 10fr);
+}
+/*sandra background*/
+.avatar-sandra {
+  grid-row: 3, 5;
+  grid-column: 1, 5;
+  height: 300px;
+}
+.bubble-sandra {
+  width: 200px;
+  grid-area: 3 / 8 / 4 / 9;
+  z-index: 2;
+}
+
+
 /*Final tavern page content start */
 
 .final-tavern-container{
@@ -61,7 +80,7 @@ header {
 }
 
 .challenge{
-  display: flex;
+  display: none;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
