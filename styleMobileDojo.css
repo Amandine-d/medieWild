@@ -22,29 +22,57 @@ header {
 
 /*footer tete pierre*/
 
+footer {
+  position: sticky;
+  bottom: 0;
+}
+
 nav {
   display: flex;
-  justify-content: right;
-  align-items: flex-start;
-  justify-items: flex-end;
+  align-content: right;
+  justify-content: flex-end;
+  
 }
 
 .nav-pierre {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   background-image: url(assets/bullefootermobi.png);
-  background-size: 200px;
+  background-size: contain;
+  background-position: right;
   background-repeat: no-repeat;
-  width: 200px;
-  height: 20vh;
-  text-align: center;
+  width: 70vw;
+  max-height: 130px;
   color: black;
+  display: none;
+  text-align: right;
+  padding-inline-end: 2vw;
+  padding-block-start: 8px;
+  
+}
+
+.nav-button {
+  font-size: 90%;
+  padding: 1%;
+  margin: 0;
+  background-color: #f45c45;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+   
+}
+
+.active {
+  display: inline-block;
 }
 
 .floating-head {
   background-color: transparent;
   border: none;
+  
+   
 }
+
 /*footer tete pierre*/
 
 /*page dojo*/

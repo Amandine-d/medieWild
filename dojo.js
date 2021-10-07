@@ -34,3 +34,15 @@ for (let i = 0; i < playButtons.length; i++) {
     }
   });
 }
+
+const bubbleContainer = document.querySelector('.nav-pierre');
+
+const menuPierre = document.querySelector('.floating-head')
+
+menuPierre.addEventListener('click', function() {
+    bubbleContainer.classList.toggle('active');
+
+})
+
+
+

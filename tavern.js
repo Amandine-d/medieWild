@@ -301,3 +301,13 @@ function battleMessage() {
     playerChoiceContainer.classList.remove("hide");
   }, 4000);
 }
+
+/* footer pierre*/
+const bubbleContainer = document.querySelector('.nav-pierre');
+
+const menuPierre = document.querySelector('.floating-head')
+
+menuPierre.addEventListener('click', function() {
+    bubbleContainer.classList.toggle('active');
+
+})
