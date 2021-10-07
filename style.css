@@ -358,70 +358,79 @@ td {
 /*css gym Amandine*/
 
 .container {
-  grid-area: 2/2/3/4;
-  width: 50vw;
-  max-width: 80%;
-  /*arrondit les angles */
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 20px 5px;
-}
-
-.btn-grid {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.btn {
-  border: 1px solid rgba(32, 94, 11, 0.063);
-  background-color: #f45c45;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: antiquewhite;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.answer.correct {
-  background-color: green;
-}
-
-.btn-wrong {
-  background-color: red;
-}
-
-.start-btn,
-.next-btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.hide {
-  display: none;
-}
-
-/*anciennement body.correct, a changer ds js*/
-
-nav.correct {
-  background-color: rgb(84, 173, 84);
-}
-
-nav.wrong {
-  background-color: rgb(184, 78, 78);
-}
-
+    grid-area: 2/2/3/4;
+    width: 50vw;
+    max-width: 80%;
+    /*arrondit les angles */
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px 5px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    border: 1px solid rgba(32, 94, 11, 0.063);
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: antiquewhite;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .answer.correct {
+    background-color: green;
+  }
+  
+  
+  
+  
+  .start-btn,
+  .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  
+  button.correct {
+    background-color: rgb(84, 173, 84);
+  }
+  
+  button.wrong {
+    background-color: rgb(184, 78, 78);
+  }
+  
+  body.correct {
+    background: greenyellow;
+    background-color: green;
+    color: goldenrod;
+  }
+  body.wrong {
+    background: rgb(34, 3, 3);
+    background-color: rebeccapurple;
+    color: red;
+  }
+  
 
 
 
