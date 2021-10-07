@@ -1,4 +1,4 @@
-*Start: 1 bouton
+/* Start: 1 bouton
 1ere question: Changer le fond ou les boutons si la reponse est correcte ou fausse
 2eme question: reset
 Compter le nombre de reponses justes 
