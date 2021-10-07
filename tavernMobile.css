@@ -14,7 +14,7 @@ header {
   background-color: #f45c45;
   width: 100vw;
   height: 15vh;
-  display: block;
+  display: flex;
   background-image: url(assets/blasonWild.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -23,18 +23,18 @@ header {
 /*Final tavern page content start */
 
 .final-tavern-container{
-  display: none;
+  display: flex;
   height: 90vh;
   width: 95vw; 
   justify-content: space-around;
 }
 .tavern-image{
-  display: none;
+  display: flex;
   height: 100%;
   width: 100%;
 }
 .tavern-description{
-  display: none;
+  display: flex;
   height: 50%;
   width: 100%;
 }
@@ -61,31 +61,34 @@ header {
 }
 
 .challenge{
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
 }
+.challenge-message{
+  display: flex;
+}
 .start-challenge{
-  display: none;
+  display: flex;
 }
 .skip-challenge{
-  display: none;
+  display: flex;
 } 
 .skip-message-container{
-  display: none;
+  display: flex;
   height: 90vh;
   width: 95vw; 
   justify-content: space-around;
 }
 .skip-message {
-  display: none;
+  display: flex;
 }
 .wait-please{
-  display: none;
+  display: flex;
 }
 .coffee-timer{
-  display:none;
+  display:flex;
 }
 
 .sandra-tag-score {
@@ -94,7 +97,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
@@ -105,7 +108,7 @@ header {
   border-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
@@ -119,7 +122,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
@@ -137,23 +140,23 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
 }
 
 .shi {
-  display: none;
+  display: flex;
 } 
 
 .fu {
-  display: none;
+  display: flex;
   
 }
 
 .mi {
-  display: none;
+  display: flex;
   
 }
 
@@ -166,7 +169,7 @@ header {
   border-color: transparent;
   width:20%;
   height: 90%;
-  display: none;
+  display: flex;
 }
 .player-hand-animation{
   background-image: url(assets/playerRock.png);
@@ -177,7 +180,7 @@ header {
   border-color: transparent;
   width:20%;
   height: 90%;
-  display: none;
+  display: flex;
 }  
 
 .try-victory-message-container {
@@ -186,13 +189,13 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
+  display: flex;
   height: 30vh;
   width: 95vw; 
   justify-content: space-around;
 }
 .sandra-hand{
-  display: block;
+  display: flex;
   width:20%;
   height: 50%;
   border-color: transparent;
@@ -217,7 +220,7 @@ header {
   background-position: center;
 }
 .player-hand{
-  display: block;
+  display: flex;
   width:20%;
   height: 50%;
   border-color: transparent;
@@ -246,13 +249,13 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
+  display: flex;
   height: 60vh;
   width: 95vw; 
   justify-content: space-around;
 }
 .who-won{
-  display: block;
+  display: flex;
   height: 50%;
   width: 90%;
   border-color: transparent;
@@ -272,16 +275,16 @@ header {
   background-position: center;
 }
 .retry-message-container{
-  display: none;
+  display: flex;
 }
 .retry-challenge-message{
-  display: none;
+  display: flex;
 }
 .retry-challenge{
-  display: none;
+  display: flex;
 }
 .skip-retry-challenge{
-  display: none;
+  display: flex;
 }
 .slide-in{
   animation-duration: 750ms;
@@ -290,6 +293,10 @@ header {
 .open{
   display: flex;
 }
+.hide{
+  display: none;
+}
+
 @keyframes slidein {
   from {
     margin-left: 100%;

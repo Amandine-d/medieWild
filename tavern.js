@@ -74,10 +74,10 @@ function transformRandom() {
 // function that command the accept challenge button
 
 function startChallengeClick() {
-  challenge.classList.remove("open");
-  sandraTagScore.classList.add("open");
-  playerTagScore.classList.add("open");
-  playerChoiceContainer.classList.add("open");
+  challenge.classList.add("hide");
+  sandraTagScore.classList.remove("hide");
+  playerTagScore.classList.remove("hide");
+  playerChoiceContainer.classList.remove("hide");
 }
 
 startChallenge.addEventListener("click", startChallengeClick);
@@ -86,8 +86,8 @@ startChallenge.addEventListener("touch", startChallengeClick);
 //function that command skip challenge in challenge container
 
 function skipChallengeClick() {
-  challenge.classList.remove("open");
-  skipMessageContainer.classList.add("open");
+  challenge.classList.add("hide");
+  skipMessageContainer.classList.remove("hide");
   console.log(coffeeTimer.innerHTML);
   setTimeout(function () {
     coffeeTimer.innerHTML = "4";
@@ -105,8 +105,8 @@ function skipChallengeClick() {
     coffeeTimer.innerHTML = "You can in !";
   }, 5000);
   setTimeout(function () {
-    skipMessageContainer.classList.remove("open");
-    finalTavernContainer.classList.add("open");
+    skipMessageContainer.classList.add("hide");
+    finalTavernContainer.classList.remove("hide");
   }, 7000);
 }
 
@@ -116,10 +116,10 @@ skipChallenge.addEventListener("touch", skipChallengeClick);
 // function that commands accept button in retry container
 
 function retryChallengeClick() {
-  challenge.classList.remove("open");
-  sandraTagScore.classList.add("open");
-  playerTagScore.classList.add("open");
-  playerChoiceContainer.classList.add("open");
+  challenge.classList.add("hide");
+  sandraTagScore.classList.remove("hide");
+  playerTagScore.classList.remove("hide");
+  playerChoiceContainer.classList.remove("hide");
 }
 
 retryChallenge.addEventListener("click", retryChallengeClick);
@@ -129,9 +129,9 @@ retryChallenge.addEventListener("touch", retryChallengeClick);
 
 function skipRetryChallengeClick() {
   if (winner === "sandra") {
-    gameVictoryMessageContainer.classList.remove("open");
-    retryMessageContainer.classList.remove("open");
-    skipMessageContainer.classList.add("open");
+    gameVictoryMessageContainer.classList.add("hide");
+    retryMessageContainer.classList.add("hide");
+    skipMessageContainer.classList.remove("hide");
     setTimeout(function () {
       coffeeTimer.innerHTML = "4";
     }, 1000);
@@ -148,13 +148,13 @@ function skipRetryChallengeClick() {
       coffeeTimer.innerHTML = "You can in !";
     }, 5000);
     setTimeout(function () {
-      skipMessageContainer.classList.remove("open");
-      finalTavernContainer.classList.add("open");
+      skipMessageContainer.classList.add("hide");
+      finalTavernContainer.classList.remove("hide");
     }, 7000);
   } else {
-    gameVictoryMessageContainer.classList.remove("open");
-    retryMessageContainer.classList.remove("open");
-    finalTavernContainer.classList.add("open");
+    gameVictoryMessageContainer.classList.add("hide");
+    retryMessageContainer.classList.add("hide");
+    finalTavernContainer.classList.remove("hide");
   }
 }
 
@@ -222,12 +222,12 @@ function checkGameWinner() {
       player.winCounter = 0;
       sandraScore.innerHTML = "0";
       playerScore.innerHTML = "0";
-      playerTagScore.classList.remove("open");
-      sandraTagScore.classList.remove("open");
-      playerChoiceContainer.classList.remove("open");
-      tryVictoryMessageContainer.classList.remove("open");
-      gameVictoryMessageContainer.classList.add("open");
-      retryMessageContainer.classList.add("open");
+      playerTagScore.classList.add("hide");
+      sandraTagScore.classList.add("hide");
+      playerChoiceContainer.classList.add("hide");
+      tryVictoryMessageContainer.classList.add("hide");
+      gameVictoryMessageContainer.classList.remove("hide");
+      retryMessageContainer.classList.remove("hide");
     }, 4000);
   } else if (player.winCounter === 3) {
     finalGameVictoryMessage.innerHTML = `${player.gameVictoryMessage}`;
@@ -238,12 +238,12 @@ function checkGameWinner() {
       player.winCounter = 0;
       sandraScore.innerHTML = "0";
       playerScore.innerHTML = "0";
-      playerTagScore.classList.remove("open");
-      sandraTagScore.classList.remove("open");
-      playerChoiceContainer.classList.remove("open");
-      tryVictoryMessageContainer.classList.remove("open");
-      gameVictoryMessageContainer.classList.add("open");
-      retryMessageContainer.classList.add("open");
+      playerTagScore.classList.add("hide");
+      sandraTagScore.classList.add("hide");
+      playerChoiceContainer.classList.add("hide");
+      tryVictoryMessageContainer.classList.add("hide");
+      gameVictoryMessageContainer.classList.remove("hide");
+      retryMessageContainer.classList.remove("hide");
     }, 4000);
   }
 }
@@ -258,46 +258,46 @@ function fillTryVictoryMessageHands() {
 //battle message animation shii fuu mii adn try victory message
 
 function battleMessage() {
-  playerChoiceContainer.classList.remove("open");
-  combatMessageContainer.classList.add("open");
-  shi.classList.add("open", /*"slide-in"*/);
-  sandraHandAnimation.classList.add("open");
-  playerHandAnimation.classList.add("open");
+  playerChoiceContainer.classList.add("hide");
+  combatMessageContainer.classList.remove("hide");
+  shi.classList.remove("hide");
+  sandraHandAnimation.classList.remove("hide");
+  playerHandAnimation.classList.remove("hide");
   setTimeout(function () {
-    shi.classList.remove("open");
-    sandraHandAnimation.classList.remove("open");
-    playerHandAnimation.classList.remove("open");
+    shi.classList.add("hide");
+    sandraHandAnimation.classList.add("hide");
+    playerHandAnimation.classList.add("hide");
   }, 500);
   setTimeout(function () {
-    fu.classList.add("open", /*"slide-in"*/);
-    sandraHandAnimation.classList.add("open");
-    playerHandAnimation.classList.add("open");
+    fu.classList.remove("hide");
+    sandraHandAnimation.classList.remove("hide");
+    playerHandAnimation.classList.remove("hide");
   }, 1000);
   setTimeout(function () {
-    fu.classList.remove("open");
-    sandraHandAnimation.classList.remove("open");
-    playerHandAnimation.classList.remove("open");
+    fu.classList.add("hide");
+    sandraHandAnimation.classList.add("hide");
+    playerHandAnimation.classList.add("hide");
   }, 1500);
   setTimeout(function () {
-    mi.classList.add("open", /*"slide-in"*/);
-    sandraHandAnimation.classList.add("open");
-  playerHandAnimation.classList.add("open");
+    mi.classList.remove("hide");
+    sandraHandAnimation.classList.remove("hide");
+  playerHandAnimation.classList.remove("hide");
   }, 2000);
   setTimeout(function () {
-    mi.classList.remove("open");
-    sandraHandAnimation.classList.remove("open");
-    playerHandAnimation.classList.remove("open");
+    mi.classList.add("hide");
+    sandraHandAnimation.classList.add("hide");
+    playerHandAnimation.classList.add("hide");
   }, 2750);
   setTimeout(function () {
-    combatMessageContainer.classList.remove("open");
+    combatMessageContainer.classList.add("hide");
   }, 2750);
   setTimeout(function () {
-    tryVictoryMessageContainer.classList.add("open");
+    tryVictoryMessageContainer.classList.remove("hide");
   }, 2750);
   setTimeout(function () {
-    tryVictoryMessageContainer.classList.remove("open");
+    tryVictoryMessageContainer.classList.add("hide");
   }, 4000);
   setTimeout(function () {
-    playerChoiceContainer.classList.add("open");
+    playerChoiceContainer.classList.remove("hide");
   }, 4000);
 }
