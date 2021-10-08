@@ -24,7 +24,9 @@ header {
 
 footer {
   position: sticky;
-  bottom: 0;
+    bottom: 0;
+  left:0;
+  overflow: auto;
 }
 
 nav {
@@ -32,6 +34,10 @@ nav {
   align-content: right;
   justify-content: flex-end;
   
+}
+
+a:hover{
+  background-color: gold;
 }
 
 .nav-pierre {
@@ -48,6 +54,7 @@ nav {
   text-align: right;
   padding-inline-end: 2vw;
   padding-block-start: 8px;
+  
   
 }
 
