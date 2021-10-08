@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedieWild</title>
-    <link href = "style.css" rel = "stylesheet" type = "text/css" />
-    <script defer src ="script.js" ></script>
-</head>
-<body>
-    <header>
-        <logo></logo>
-        
-    </header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Ubuntu&family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="styleMobileIndex.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (max-width: 880px)"
+    />
+    <link
+      href="style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 880px)"
+    />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header class="header"></header>
+    <div class="grid-container-index">
+      <header class="index"></header>
+      <h1>Pierre</h1>
 
-    <div id="Pierre">
-        <h1>Character</h1>
-        <p class= "bubble" id="bubblePierre">Bulle</p>
+      <img src="assets/bullemobi.png" alt="bubble" class="bubble-pierre" />
 
-    </div>
-    <div id="xavier">
-        <h1>Character</h1>
-        <p class= "bubble" id="bubbleXavier">Bulle</p>
+      <p class="bubble-text" id="bubblePierre">
+        Hello, I'm Pierre! <br />
+        I will be your assistant during your journey, clic on me if you want to
+        go somewhere !
+      </p>
+      <img
+        src="assets/avatarPierre.png"
+        alt="avatarPierre"
+        class="avatar-pierre"
+      />
 
-    </div>
-    <div id="sandra">
-        <h1>Character</h1>
-        <p class= "bubble" id="bubbleSandra">Bulle</p>
+      <h2>Xavier</h2>
+      <img src="assets/bullemobi.png" alt="bubble" class="bubble-xavier" />
+      <p class="bubble-text" id="bubbleXavier">
+        Hello, I'm Xavier! <br />
+        I will be your trainer for this adventure!
+      </p>
+      <img
+        src="assets/avatarXavier.png"
+        alt="avatarXavier"
+        class="avatar-xavier"
+      />
 
-    </div>
-    <div id="us">
-        <p>Promo</p>
-
+      <h3>Sandra</h3>
+      <img src="assets/bullemobi.png" alt="bubble" class="bubble-sandra" />
+      <p class="bubble-text" id="bubbleSandra">
+        Hello, I'm Sandra! <br />I'm the guardian of the Tavern!
+      </p>
+      <img
+        src="assets/avatarSandra.png"
+        alt="avatarSandra"
+        class="avatar-sandra"
+      />
     </div>
 
     <footer>
-        <nav>Pierre</nav>
-        <button class="floatingHead" >Pierre's head</button>
+      <nav>
+        <div class="nav-pierre">
+          <p class="where">Where do you want to go?</p>
+          <a href="index.html" class="nav-button">Accueil</a>
+          <a href="/dojo.html" class="nav-button">Dojo</a>
+          <a href="/gymnasium.html" class="nav-button">Gymnasium</a>
+          <a href="/tavern.html" class="nav-button">Tavern</a>
+          <a href="/contact.html" class="nav-button">Contact</a>
+        </div>
+        <button class="floating-head">
+          <img src="assets/tetePierre.png" alt="buttonPierre" height="100vh" />
+        </button>
+      </nav>
     </footer>
-
-    
-</body>
+  </body>
 </html>

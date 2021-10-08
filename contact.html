@@ -5,16 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedieWild</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Ubuntu&family=Uncial+Antiqua&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a2279d7aa4.js" crossorigin="anonymous"></script>
     <link href = "style.css" rel = "stylesheet" type = "text/css" />
-    <script src ="script.js" ></script>
+    <script defer src ="contact.js" ></script>
+
+
 </head>
 <body>
-    <form>
-        
+    <header>
+      
+      </header>
+       <div id = "container-form">
+        <div id = "wild-code">
+            <h3 id = 'title-container'>Wild Code School</h3>
+            <ul id = 'ul-form'>
+                <li id = 'la-loupe'><i class = "fa fa-road"></i>
+                    La Loupe
+                </li>
+                <li id = 'phone'><i class = "fa fa-phone"></i>
+                    Give us a call: 06 42 16 74 09
+                </li>
+                <li id ='mail'><i class="fas fa-feather-alt"></i>
+                    Email: Probably pending, we have a very slow @
+                </li>
+            </ul>
+        </div>             
+    
+        <form id = "future-wilder" class = "form-contact">
+   
+     
+          <h5 id = 'h5-form'>Contact Us</h5>
+
+          <p id = 'name-future' class='p-form'>
+            <label for = "name"></label>
+            <input name = "name" id = "name" placeholder = "Nickname" required>
+          </p>
+
+          <p id = 'email-form' class='p-form'>
+            <label for = "email"></label>
+            <input type = "email" name = "email" id = "email" placeholder = "email@wildcode.com" required>
+          </p>  
+
+          <p id = 'message-form' class='p-form'>
+            <label for ="message"></label>
+            <textarea id= "message" name = "message" placeholder = "I want to say 
+              something" row='5'></textarea>
+          </p>
+           <button id = button-form type='submit'>
+          </button> 
+           </div>
+
     </form>
     <footer>
-        <nav>Pierre</nav>
-        <button class="floatingHead" >Pierre's head</button>
+      <nav>
+        <div class="nav-pierre">
+          <p class="where">Where do you want to go?</p>
+          <a href= "index.html" class="nav-button">Accueil</a>
+          <a href= "/dojo.html" class="nav-button">Dojo</a>
+            <a href= "/gymnasium.html" class="nav-button">Gymnasium</a>
+              <a href= "/tavern.html" class="nav-button">Tavern</a>
+                <a href= "/contact.html" class="nav-button">Contact</a>
+        </div>
+        <button class="floating-head">
+          <img src="assets/tetePierre.png" alt="buttonPierre" height="100vh" />
+        </button>
+      </nav>
     </footer>
+
 </body>
 </html>

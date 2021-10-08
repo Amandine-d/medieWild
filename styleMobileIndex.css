@@ -1,0 +1,186 @@
+/*sur toutes les pages */
+
+body {
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
+  color: white;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+    display: none;
+}
+
+/*footer tete pierre*/
+
+footer {
+  position: sticky;
+    bottom: 0;
+ 
+}
+
+nav {
+  display: flex;
+  align-content: right;
+  justify-content: flex-end;
+  
+}
+
+a:hover{
+  background-color: gold;
+}
+
+.nav-pierre {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background-image: url(assets/bullefootermobi.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 70vw;
+  max-height: 130px;
+  color: black;
+  display: none;
+  text-align: right;
+  padding-inline-end: 2vw;
+  padding-block-start: 8px;
+  
+  
+}
+
+.nav-button {
+  font-size: 90%;
+  padding: 1%;
+  margin: 0;
+  background-color: #f45c45;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+   
+}
+
+.active {
+  display: inline-block;
+}
+
+.floating-head {
+  background-color: transparent;
+  border: none;
+  
+   
+}
+
+/*footer tete pierre*/
+
+/*page index*/
+
+.grid-container-index {
+  display: grid;
+  grid-template-rows: 15vh 8vh 20vh 40vh;
+  grid-template-columns: repeat(
+    3,
+    10px 300px 10px
+  ); /*3 fois 3 columnes de 10px 300px 10px)*/
+  text-align: center;
+  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
+  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
+}
+
+.index {
+  grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
+  background-image: url(assets/blasonWild.png),
+    url(assets/blasonWild.png), url(assets/blasonWild.png);
+  background-size: 32vh;
+  background-repeat: no-repeat;
+  background-position-x: 70px, 380px, 720px;
+  background-color: #f45c45
+}
+
+.bubble-text {
+  z-index: 3;
+  color: black;
+  font-size: 12px;
+  display: block;
+  width: 180px;
+  height: 80px;
+  text-align: center;
+  padding: 8px;
+}
+
+#bubblePierre {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#bubbleXavier {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#bubbleSandra {
+  grid-area: 3 / 8 / 4 / 9;
+}
+
+.bubble-pierre {
+  width: 200px;
+  grid-area: 3 / 2 / 4 / 3;
+  z-index: 2;
+}
+
+.bubble-xavier {
+  width: 200px;
+  grid-area: 3 / 5 / 4 / 6;
+  z-index: 2;
+}
+
+.bubble-sandra {
+  width: 200px;
+  grid-area: 3 / 8 / 4 / 9;
+  z-index: 2;
+}
+
+.avatar-pierre {
+  height: 300px;
+  grid-row-start: 3;
+  z-index: 1;
+}
+
+.avatar-xavier {
+  height: 300px;
+  grid-area: 3 / 5 / 5 / 6;
+  z-index: 1;
+}
+
+.avatar-sandra {
+  height: 300px;
+  grid-area: 3 / 8 / 5 / 9;
+  z-index: 1;
+}
+
+/*attention balises titres modifiées jusque h3*/
+
+h1 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/2/3/3;
+  margin-top: 33, 3%;
+}
+
+h2 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/5/3/6;
+  margin-top: 33, 3%;
+}
+
+h3 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/8/3/9;
+  margin-top: 33, 3%;
+}
+

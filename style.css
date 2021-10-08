@@ -1,1 +1,572 @@
+/*sur toutes les pages */
 
+body {
+  background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
+  color: white;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #f45c45;
+  width: 100vw;
+  height: 15vh;
+  display: block;
+  background-image: url(assets/blasonWild.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.logo-wild {
+  height: 14vh;
+}
+
+/*footer tete pierre*/
+footer {
+  position: sticky;
+  bottom: 0;
+}
+
+a:hover {
+  background-color: rgb(156, 115, 9);
+}
+
+nav {
+  display: flex;
+  align-content: right;
+  justify-content: flex-end;
+}
+
+.nav-pierre {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background-image: url(assets/bullefootermobi.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 42vw;
+  max-height: 130px;
+  color: black;
+  display: none;
+  text-align: right;
+  padding-inline-end: 2vw;
+}
+
+.nav-button {
+  font-size: 90%;
+  padding: 1%;
+  margin: 0;
+  background-color: #f45c45;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.active {
+  display: inline-block;
+}
+
+.floating-head {
+  background-color: transparent;
+  border: none;
+  height: 20vh;
+}
+/*footer tete pierre*/
+
+/*page index*/
+
+.grid-container-index {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1vh 8vh 20vh 40vh;
+  grid-template-columns: repeat(
+    3,
+    10px 300px 10px
+  ); /*4 fois 3 columnes de 10px 300px 10px)*/
+  text-align: center;
+  grid-auto-flow: column; /*permet le scrolling horizontal et non vertical*/
+  -webkit-overflow-scrolling: touch; /*sensé permettre smoother scrolling avec bump a la fin*/
+}
+
+.bubble-text {
+  z-index: 3;
+  color: black;
+  font-size: 12px;
+  display: block;
+  width: 180px;
+  height: 80px;
+  text-align: center;
+  padding: 8px;
+}
+
+#bubblePierre {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#bubbleXavier {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#bubbleSandra {
+  grid-area: 3 / 8 / 4 / 9;
+}
+
+.bubble-pierre {
+  width: 200px;
+  grid-area: 3 / 2 / 4 / 3;
+  z-index: 2;
+}
+
+.bubble-xavier {
+  width: 200px;
+  grid-area: 3 / 5 / 4 / 6;
+  z-index: 2;
+}
+
+.bubble-sandra {
+  width: 200px;
+  grid-area: 3 / 8 / 4 / 9;
+  z-index: 2;
+}
+
+.avatar-pierre {
+  height: 300px;
+  grid-row-start: 3;
+  z-index: 1;
+}
+
+.avatar-xavier {
+  height: 300px;
+  grid-area: 3 / 5 / 5 / 6;
+  z-index: 1;
+}
+
+.avatar-sandra {
+  height: 300px;
+  grid-area: 3 / 8 / 5 / 9;
+  z-index: 1;
+}
+
+/*attention balises titres modifiées jusque h3*/
+
+h1 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/2/3/3;
+  margin-top: 33, 3%;
+}
+
+h2 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/5/3/6;
+  margin-top: 33, 3%;
+}
+
+h3 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  grid-area: 2/8/3/9;
+  margin-top: 33, 3%;
+}
+
+/*page dojo*/
+
+.dojo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+#grid-dojo {
+  display: grid;
+  grid-template-columns: 1fr 20vw 1fr;
+  grid-template-rows: 1fr;
+  z-index: 1;
+  text-align: center;
+  padding: 3%;
+}
+
+.dojo-text {
+  width: 90%;
+  background-image: url(assets/bullemobi.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: black;
+  font-size: 1.2vw;
+  text-align: center;
+  grid-area: 1/1/2/2;
+  justify-self: center;
+}
+
+.pierre-dojo {
+  grid-area: 1/2/2/3;
+  width: 30vw;
+  justify-self: center;
+}
+
+/*button placement for screen*/
+
+#grid-button {
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20% 10% 10% 10% 6fr;
+  z-index: 2;
+}
+.play {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/*row-start/column-start/row-end/column-end*/
+#one {
+  grid-area: 2/2/3/3;
+  background-image: url(assets/beer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#two {
+  grid-area: 2/3/3/4;
+  background-image: url(assets/tacos.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#three {
+  grid-area: 2/4/3/5;
+  background-image: url(assets/nyanCat.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#four {
+  grid-area: 3/2/4/3;
+  background-image: url(assets/logoLol.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#five {
+  grid-area: 3/3/4/4;
+  background-image: url(assets/hacker.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#six {
+  grid-area: 3/4/4/5;
+  background-image: url(assets/pillow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#result {
+  grid-area: 4/2/5/5;
+  color: black;
+  font-size: 1.5vw;
+}
+
+/*page gym*/
+
+.grid-gym {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50vh 1fr;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.gym-pixel {
+  grid-area: 1/2/2/3;
+  max-height: 50vh;
+  max-width: 60vw;
+}
+
+.gym {
+  grid-area: 1/3/2/4;
+  max-height: 50vh;
+}
+
+@media screen and (max-width: 568px) {
+  .gym-pixel {
+    grid-area: 1/2/2/4;
+    max-height: 45%;
+    width: 60vw;
+    align-self: start;
+  }
+  .gym {
+    grid-area: 1/2/2/4;
+    justify-items: center;
+    align-self: end;
+  }
+  .xavier-gym {
+    grid-area: 1/2/2/4;
+    justify-items: center;
+    align-self: end;
+    height: 20vh;
+  }
+  .nav-pierre {
+    font-size: 11px;
+    width: 70vw;
+    max-height: 130px;
+    padding-inline-end: 2vw;
+    padding-block-start: 8px;
+  }
+}
+table {
+  grid-area: 1/1/3/2;
+  border-style: solid;
+  border-color: chocolate;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-width: 5px;
+}
+
+td {
+  border-bottom-style: solid;
+  border-bottom-color: chocolate;
+  border-width: 5px;
+  width: 20vw;
+  height: 8vh;
+}
+
+.ladder-bottom {
+  border-bottom: transparent;
+}
+
+.promo {
+  height: 8vh;
+}
+
+.xavier-gym {
+  max-height: 40vh;
+}
+
+/*css gym Amandine*/
+
+.container {
+    grid-area: 2/2/3/4;
+    width: 50vw;
+    max-width: 80%;
+    /*arrondit les angles */
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px 5px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    border: 1px solid rgba(32, 94, 11, 0.063);
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: antiquewhite;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .answer.correct {
+    background-color: green;
+  }
+  
+  
+  
+  
+  .start-btn,
+  .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  
+  button.correct {
+    background-color: rgb(84, 173, 84);
+  }
+  
+  button.wrong {
+    background-color: rgb(184, 78, 78);
+  }
+  
+  body.correct {
+    background: greenyellow;
+    background-color: green;
+    color: goldenrod;
+  }
+  body.wrong {
+    background: rgb(34, 3, 3);
+    background-color: rebeccapurple;
+    color: red;
+  }
+  
+
+
+
+/* CONTACT */
+
+#container-form{      
+  display: grid;
+  grid-template-rows: 20vh 80vh;
+  grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding:1em;
+    width: 80vw;
+    height: 90vh;
+}
+
+#ul-form{
+  list-style:none;
+  padding: 0;
+  margin:0;
+}
+
+#wild-code {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+#future-wilder {
+
+      display: grid;
+      grid-area: 2/1/3/2;
+      grid-template-rows: repeat(10, 10vh);
+      grid-template-columns: repeat(10, 10vh);
+  
+      justify-content: center;
+      border-top: 20px;
+    
+      background-image: url('assets/parcheminmobi.png');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: contain;
+      background-position: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      
+
+  }
+
+#h5-form, #title-container{
+  margin: 0;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+
+}
+
+.p-form{
+  justify-content: center;
+
+
+}
+
+
+#h5-form {
+  grid-area: 2/3/2/8;
+  background-color: transparent;
+  border-color: transparent;
+  margin: 0;
+  font-style: oblique;
+  font-size: 15px;
+  color: rgb(219, 205, 231);
+}
+
+#name-future {
+  grid-area: 3/4/3/8;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#email-form {
+  grid-area: 4/4/4/7;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+#message-form {
+  grid-area: 5/4/7/7;
+  background-color: transparent;
+  border-color: transparent;
+
+}
+
+#button-form {
+  grid-area: 7/7/7/8;
+  background-color: transparent;
+  border-color: transparent;
+
+}
+input {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;;
+}
+
+#button-form:hover{
+  background-image: url("assets/horse-button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 10vh;
+  border-bottom: 2vh;
+}
+
+
+
+textarea {
+  background: transparent;
+  border-color: transparent;
+  outline:none;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-overflow: clip;
+}
+
+
+input{
+  background: transparent;
+}

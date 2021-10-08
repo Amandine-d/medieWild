@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedieWild</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Ubuntu&family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="style.css"
+      rel="stylesheet"
+      type="text/css"
+     
+    />
+    <script defer src="gymnasium.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <h1>Gymnasium</h1>
+    <div class="grid-gym">
+      <table>
+        <tr>
+          <td><img src="assets/cyriac.png" alt="promo" class="promo" onclick="catchphrase('cyriac')"/></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><img src="assets/peter.png" alt="promo" class="promo" onclick="catchphrase('peter')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/sidney.png" alt="promo" class="promo" onclick="catchphrase('sidney')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/amandine.png" alt="promo" class="promo"  onclick="catchphrase('amandine')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/florian.png" alt="promo" class="promo" onclick="catchphrase('florian')"/><img src="assets/ghislain.png" alt="promo" class="promo" onclick="catchphrase('ghislain')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/enzo.png" alt="promo" class="promo" onclick="catchphrase('enzo')"/><img src="assets/greg.png" alt="promo" class="promo" onclick="catchphrase('greg')"/><img src="assets/nicolas.png" alt="promo" class="promo" onclick="catchphrase('nicolas')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/avatarFanny.png" alt="promo" class="promo" onclick="catchphrase('fanny')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/paco.png" alt="promo" class="promo" onclick="catchphrase('paco')"/><img src="assets/edouard.png" alt="promo" class="promo" onclick="catchphrase('eddy')"/></td>
+        </tr>
+        <tr>
+          <td><img src="assets/davy.png" alt="promo" class="promo" onclick="catchphrase('davy')"/></td>
+        </tr>
+        <tr>
+          <td class="ladder-bottom"></td>
+        </tr>
+      </table>
+      <img src="assets/gymnasium.png" alt="gym" class="gym-pixel" />
+      <p class="gym">
+        <img
+          src="assets/avatarXavierHead.png"
+          alt="xavier"
+          class="xavier-gym"
+          Welcome
+          to
+          the
+          Gym!
+        />
+        <br />You will train with Xavier in a Kahoot!
+      </p>
+      <nav class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start</button>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+      </nav>
+    </div>
+    <footer>
+      <nav>
+        <div class="nav-pierre">
+          <p class="where">Where do you want to go?</p>
+          <a href= "index.html" class="nav-button">Accueil</a>
+          <a href= "/dojo.html" class="nav-button">Dojo</a>
+            <a href= "/gymnasium.html" class="nav-button">Gymnasium</a>
+              <a href= "/tavern.html" class="nav-button">Tavern</a>
+                <a href= "/contact.html" class="nav-button">Contact</a>
+        </div>
+        <button class="floating-head">
+          <img src="assets/tetePierre.png" alt="buttonPierre" height="100vh" />
+        </button>
+      </nav>
+    </footer>
+  </body>
+</html>
