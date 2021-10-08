@@ -106,7 +106,7 @@ function skipChallengeClick() {
     coffeeTimer.innerHTML = "1";
   }, 4000);
   setTimeout(function () {
-    coffeeTimer.innerHTML = "You can in !";
+    coffeeTimer.innerHTML = "Well go in !";
   }, 5000);
   setTimeout(function () {
     skipMessageContainer.classList.add("hide");
@@ -155,7 +155,7 @@ function skipRetryChallengeClick() {
       coffeeTimer.innerHTML = "1";
     }, 4000);
     setTimeout(function () {
-      coffeeTimer.innerHTML = "You can in !";
+      coffeeTimer.innerHTML = "Well, go in!";
     }, 5000);
     setTimeout(function () {
       skipMessageContainer.classList.add("hide");
