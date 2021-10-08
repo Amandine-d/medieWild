@@ -1,4 +1,4 @@
-/*Start: 1 bouton
+/* Start: 1 bouton
 1ere question: Changer le fond ou les boutons si la reponse est correcte ou fausse
 2eme question: reset
 Compter le nombre de reponses justes 
@@ -14,37 +14,46 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions
 let currentQuestionIndex
 const maxQuestions = 4;
-let numberQuestion = 0
 
+//When we click sur start : execute the code that's inside statGame
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
-  numberQuestion++
-
   setNextQuestion()
 })
 
+
+//When we atart the game
 function startGame() {
+    //Hide the start button once clicked
   startButton.classList.add('hide')
+    //question.sort: if it's sorted - or + it's going to be sorted a certain way. Math random will give a number between 1 and 0.
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
+    //we  remove the hide class on the questions' container to see it
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
 
 function setNextQuestion() {
   resetState()
+    //Create a function to show the random question at the current question index
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+
 function showQuestion(question) {
+    //go inside the function question to ckeck to question
   questionElement.innerText = question.question
+      //Create button answer on text
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     //Create button answer on text
     button.innerText = answer.text
+        //We need to add the button class to it so we can click on it
     button.classList.add('btn')
     if (answer.correct) {
+            //we need to add a data attribute to our button
       button.dataset.correct = answer.correct
     }
     button.addEventListener('click', selectAnswer)
@@ -54,6 +63,7 @@ function showQuestion(question) {
 
 function resetState() {
   clearStatusClass(document.body)
+    //remove the button if it's not need. ie: if it's a 2answers question instead of 44
   nextButton.classList.add('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -61,20 +71,24 @@ function resetState() {
 }
 
 function selectAnswer(e) {
+    //e.target =  button we click on
   const selectedButton = e.target
+    //we need to ckeck thedataset of correct
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
+
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
-   if(maxQuestions < numberQuestion) {
+   if(maxQuestions < currentQuestionIndex) {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
-    endGame()
-    //Afficher ici pour aller au gymnase
+    numberQuestion = 0;
+    correctAnswerUser = 0;
     
    }
    else {
+     //Fait apparaitre le next button
     nextButton.classList.remove('hide')
   }
 }
@@ -112,7 +126,7 @@ const questions = [
       answers: [
           {text:"Talent Week", correct: true},
           {text:"Business Development", correct: false },
-          {text:"unefined", correct: false},  
+          {text:"undefined", correct: false},  
           {text:"Give an experience", correct: false },
       ],
   },
@@ -238,13 +252,60 @@ const questions = [
   }
   ]
 
+  const cyriac = new Audio('assets/cyriac.mp3');
+  const amandine = new Audio('assets/amandine.mp3');
+  const peter = new Audio('assets/peter.mp3');
+  const fanny= new Audio('assets/fanny.mp3');
+  const sidney= new Audio('assets/sidney.mp3');
+  const florian= new Audio('assets/florian.mp3');
+  const ghislain= new Audio('assets/ghislain.mp3');
+  const nicolas= new Audio('assets/nicolas.mp3');
+  const greg= new Audio('assets/greg.mp3');
+  const enzo= new Audio('assets/enzo.mp3');
+  const paco= new Audio('assets/paco.mp3');
+  const eddy= new Audio('assets/eddy.mp3');
+  const davy= new Audio('assets/davy.mp3');
+  
+
+  function catchphrase(person) {
+      if(person == 'amandine') {
+          amandine.play();
+      } else if(person == 'cyriac') {
+        cyriac.play();
+      } else if(person == 'peter') {
+        peter.play();
+      } else if(person == 'fanny') {
+        fanny.play();
+      } else if(person == 'sidney') {
+        sidney.play();
+      } else if (person == 'florian') {
+        florian.play();
+      } else if (person == 'ghislain') {
+        ghislain.play();
+      } else if (person == 'nicolas') {
+        nicolas.play();
+      } else if (person == 'greg') {
+        greg.play();
+      } else if (person == 'enzo') {
+        enzo.play();
+      } else if (person == 'paco') {
+        paco.play();
+      } else if (person == 'eddy') {
+        eddy.play();
+      } else if (person == 'davy') {
+        davy.play();
+      }             
+    }
+
   /*footer pierre*/
 
-  const bubbleContainer = document.querySelector('.nav-pierre');
+ const audio = new Audio('assets/scream.mp3');
+const bubbleContainer = document.querySelector('.nav-pierre');
 
-  const menuPierre = document.querySelector('.floating-head')
-  
-  menuPierre.addEventListener('click', function() {
-      bubbleContainer.classList.toggle('active');
-  
-  })
+const menuPierre = document.querySelector('.floating-head')
+
+menuPierre.addEventListener('click', function() {
+    bubbleContainer.classList.toggle('active');
+    audio.play()
+
+});

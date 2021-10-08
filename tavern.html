@@ -14,82 +14,96 @@
     <script defer src="tavern.js"></script>
   </head>
   <body>
-    <header>
-     
-    </header>
+    <header></header>
 
-    <div class="challenge">
-      <h4 class="challenge-message">
-        Normally it's my turn to use the coffee machine but would you mind a
-        little challenge ?
-      </h4>
-      <button class="start-challenge">Accept</button>
-      <button class="skip-challenge">Skip</button>
-    </div>
-
-    <div class="skip-message-container hide">
-      <h2 class="skip-message">
-        OK, I'll make my coffee first, then you can come in !
-      </h2>
-      <h2 class="wait-please">Please Wait...</h2>
-      <h2 class="coffee-timer">5</h2>
-    </div>
-
-    <div class="final-tavern-container hide">
-      <img src="" class="tavern-image" alt="tavern-image" />
-      <h2 class="tavern-description">Some description of tavern</h2>
-    </div>
-
-    <div class="sandra-tag-score hide">
-      <h2 id="sandra-tag" class="sandra-name-tag">Sandra</h2>
-      <h2 id="sandra-score" class="sandra-score">0</h2>
-    </div>
-
-    <div class="player-choice-container hide">
-      <h4 class="choose-your-sign">Choose your sign!</h4>
-      <button id="paper" class="player-choice" value="paper"></button>
-      <button id="rock" class="player-choice" value="rock"></button>
-      <button id="scissors" class="player-choice" value="scissors"></button>
-    </div>
-
-    <div class="combat-message-container hide">
-      <button class="sandra-hand-animation hide"></button>
-      <button class="player-hand-animation hide"></button>
-      <h2 id="shi" class="shi hide">SHIIIIIIIII</h2>
-      <h2 id="fu" class="fu hide">FUUUUUUUUUU</h2>
-      <h2 id="mi" class="mi hide">MIIIIIIIIII</h2>
-    </div>
-
-    <div class="try-victory-message-container hide">
-      <button class="sandra-hand"></button>
-      <button class="player-hand"></button>
-      <h2 class="who-wins"></h2>
+    <div id="tavern" class="tavern">
+      <div class="challenge">
+        <button class="bubble-sandra"></button>
+        <button class="avatar-sandra"></button>
+        <h2 class="challenge-message">
+          Wanna' use the coffee machine, mind a little challenge ?
+        </h2>
+        <button class="start-challenge">Accept</button>
+        <button class="skip-challenge">Skip</button>
       </div>
 
-    <div class="player-tag-score hide">
-      <h2 id="player-score" class="player-score">0</h2>
-      <h2 id="player-tag" class="player-name-tag">YOU</h2>
+      <div class="skip-message-container hide">
+        <button class="bubble-sandra"></button>
+        <button class="avatar-sandra"></button>
+        <h2 class="skip-message">I'll make my coffee first, then!</h2>
+        <h2 class="wait-please">Wait please...</h2>
+        <h2 class="coffee-timer">5</h2>
+      </div>
+
+      <div class="final-tavern-container hide">
+        <h2 class="tavern-title">Tavern</h2>
+        <h3 class="tavern-description">
+          A place where stories are told, where bellies are filled and History
+          is made....
+        </h3>
+      </div>
+      <div class="shifumi-loop-container">
+        <div class="choose-your-sign-container hide">
+          <h3 class="choose-your-sign">Choose your sign!</h3>
+        </div>
+        <div class="sandra-tag-score hide">
+          <h2 id="sandra-tag" class="sandra-name-tag">Sandra</h2>
+          <button class="sandra-score-board"></button>
+          <h2 id="sandra-score" class="sandra-score">0</h2>
+        </div>
+
+        <div class="player-choice-container hide">
+          <button id="paper" class="player-choice" value="paper"></button>
+          <button id="rock" class="player-choice" value="rock"></button>
+          <button id="scissors" class="player-choice" value="scissors"></button>
+        </div>
+
+        <div class="combat-message-container hide">
+          <button class="sandra-hand-animation hide"></button>
+          <h2 id="shi" class="shi hide">SHII</h2>
+          <h2 id="fu" class="fu hide">FUUU</h2>
+          <h2 id="mi" class="mi hide">MIII</h2>
+          <button class="player-hand-animation hide"></button>
+        </div>
+
+        <div class="try-victory-message-container hide">
+          <button class="sandra-hand"></button>
+          <h2 class="who-wins"></h2>
+          <button class="player-hand"></button>
+        </div>
+
+        <div class="player-tag-score hide">
+          <h2 id="player-score" class="player-score">0</h2>
+          <button class="player-score-board"></button>
+          <h2 id="player-tag" class="player-name-tag">YOU</h2>
+        </div>
+      </div> 
+      <div class="end-game-container">
+        <div class="game-victory-message-container hide">
+          <h2 class="final-game-victory-message"></h2>
+          <button class="tavern-sign"></button>
+          <button class="who-won"></button>
+        </div>
+
+        <div class="retry-message-container hide">
+          <h2 class="retry-message">Do you want to try again?</h2>
+          <button class="retry-challenge">Accept</button>
+          <button class="skip-retry-challenge">Skip</button>
+        </div>
+      </div>      
+     
+      
     </div>
     
-    <div class="game-victory-message-container hide">
-      <h2 class="final-game-victory-message"></h2>
-      <button class="who-won"></button>
-    </div>
-
-    <div class="retry-message-container hide">
-      <h2 class="retry-message">Do you want to try again?</h2>
-      <button class="retry-challenge">Accept</button>
-      <button class="skip-retry-challenge">Skip</button>
-    </div>
     <footer>
       <nav>
         <div class="nav-pierre">
           <p class="where">Where do you want to go?</p>
-          <a href= "index.html" class="nav-button">Accueil</a>
-          <a href= "/dojo.html" class="nav-button">Dojo</a>
-            <a href= "/gymnasium.html" class="nav-button">Gymnasium</a>
-              <a href= "/tavern.html" class="nav-button">Tavern</a>
-                <a href= "/contact.html" class="nav-button">Contact</a>
+          <a href="index.html" class="nav-button">Accueil</a>
+          <a href="/dojo.html" class="nav-button">Dojo</a>
+          <a href="/gymnasium.html" class="nav-button">Gymnasium</a>
+          <a href="/tavern.html" class="nav-button">Tavern</a>
+          <a href="/contact.html" class="nav-button">Contact</a>
         </div>
         <button class="floating-head">
           <img src="assets/tetePierre.png" alt="buttonPierre" height="100vh" />
