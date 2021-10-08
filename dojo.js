@@ -1,5 +1,6 @@
 const result = document.getElementById("result");
-
+const soundCorrect = new Audio('assets/correct.mp3');
+const soundWrong = new Audio('assets/wrong.mp3');
 //function choisir un nombre entier random
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -25,11 +26,13 @@ for (let i = 0; i < playButtons.length; i++) {
   playButtons[i].addEventListener("click", function compare() {
     if (randomChoice == userChoice) {
       result.innerHTML="How did you know?";
+      soundCorrect.play();
       randomChoice = getRandomIntInclusive(1, 6);
       //si identique, gagné et choisi un nouveau random number
       console.log(randomChoice);
     } else {
       result.innerHTML="Try again";
+      soundWrong.play();
       //si perdu rien ne se passe
     }
   });
