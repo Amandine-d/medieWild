@@ -3,7 +3,7 @@ const sandra = {
   choice: [],
   winCounter: 0,
   tryVictoryMessage: "Sandra wins !",
-  gameVictoryMessage: "Sandra wins, She kicks you out of the kitchen!",
+  gameVictoryMessage: "Sandra wins, She kicks you out of the tavern!",
 };
 
 const player = {
@@ -39,6 +39,7 @@ const playerScore = document.querySelector(".player-score");
 const combatMessageContainer = document.querySelector(
   ".combat-message-container"
 );
+const chooseYourSignContainer = document.querySelector(".choose-your-sign-container")
 const shi = document.querySelector(".shi");
 const fu = document.querySelector(".fu");
 const mi = document.querySelector(".mi");
@@ -59,6 +60,8 @@ const skipRetryChallenge = document.querySelector(".skip-retry-challenge");
 const finalTavernContainer = document.querySelector(".final-tavern-container");
 const sandraHandAnimation = document.querySelector(".sandra-hand-animation");
 const playerHandAnimation = document.querySelector(".player-hand-animation");
+const shifumiLoopContainer = document.querySelector(".shifumi-loop-container");
+const endGameContainer = document.querySelector(".end-game-container");
 //  function transform random choice to rock scisors paper
 
 function transformRandom() {
@@ -77,6 +80,7 @@ function startChallengeClick() {
   challenge.classList.add("hide");
   sandraTagScore.classList.remove("hide");
   playerTagScore.classList.remove("hide");
+  chooseYourSignContainer.classList.remove("hide");
   playerChoiceContainer.classList.remove("hide");
 }
 
@@ -102,7 +106,7 @@ function skipChallengeClick() {
     coffeeTimer.innerHTML = "1";
   }, 4000);
   setTimeout(function () {
-    coffeeTimer.innerHTML = "You can in !";
+    coffeeTimer.innerHTML = "Well go in !";
   }, 5000);
   setTimeout(function () {
     skipMessageContainer.classList.add("hide");
@@ -119,7 +123,12 @@ function retryChallengeClick() {
   challenge.classList.add("hide");
   sandraTagScore.classList.remove("hide");
   playerTagScore.classList.remove("hide");
+  chooseYourSignContainer.classList.remove("hide")
   playerChoiceContainer.classList.remove("hide");
+  shifumiLoopContainer.classList.remove("hide");
+  gameVictoryMessageContainer.classList.add("hide");
+  retryMessageContainer.classList.add("hide");
+  endGameContainer.classList.add("hide");
 }
 
 retryChallenge.addEventListener("click", retryChallengeClick);
@@ -131,6 +140,7 @@ function skipRetryChallengeClick() {
   if (winner === "sandra") {
     gameVictoryMessageContainer.classList.add("hide");
     retryMessageContainer.classList.add("hide");
+    endGameContainer.classList.add("hide");
     skipMessageContainer.classList.remove("hide");
     setTimeout(function () {
       coffeeTimer.innerHTML = "4";
@@ -145,7 +155,7 @@ function skipRetryChallengeClick() {
       coffeeTimer.innerHTML = "1";
     }, 4000);
     setTimeout(function () {
-      coffeeTimer.innerHTML = "You can in !";
+      coffeeTimer.innerHTML = "Well, go in!";
     }, 5000);
     setTimeout(function () {
       skipMessageContainer.classList.add("hide");
@@ -224,10 +234,13 @@ function checkGameWinner() {
       playerScore.innerHTML = "0";
       playerTagScore.classList.add("hide");
       sandraTagScore.classList.add("hide");
+      chooseYourSignContainer.classList.add("hide");
       playerChoiceContainer.classList.add("hide");
       tryVictoryMessageContainer.classList.add("hide");
+      shifumiLoopContainer.classList.add("hide");
       gameVictoryMessageContainer.classList.remove("hide");
       retryMessageContainer.classList.remove("hide");
+      shifumiLoopContainer.classList.add("hide");
     }, 4000);
   } else if (player.winCounter === 3) {
     finalGameVictoryMessage.innerHTML = `${player.gameVictoryMessage}`;
@@ -240,8 +253,10 @@ function checkGameWinner() {
       playerScore.innerHTML = "0";
       playerTagScore.classList.add("hide");
       sandraTagScore.classList.add("hide");
+      chooseYourSignContainer.classList.add("hide");
       playerChoiceContainer.classList.add("hide");
       tryVictoryMessageContainer.classList.add("hide");
+      shifumiLoopContainer.classList.add("hide");
       gameVictoryMessageContainer.classList.remove("hide");
       retryMessageContainer.classList.remove("hide");
     }, 4000);

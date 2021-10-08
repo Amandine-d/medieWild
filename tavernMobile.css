@@ -8,7 +8,6 @@ body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
- 
 }
 
 header {
@@ -21,316 +20,447 @@ header {
   background-size: contain;
   background-position: center;
 }
-.tavern{
-  display: grid;
-  grid-row: 1fr, repeat(3,33fr);
-  grid-column: repeat(10, 10fr);
-}
-/*sandra background*/
-.avatar-sandra {
-  grid-row: 2, 3;
-  grid-column: 5, 10;
-  height: 300px;
-}
-.bubble-sandra {
-  width: 200px;
-  grid-area: 3 / 8 / 4 / 9;
-  z-index: 2;
+.tavern {
+  display: block;
+  height: 65vh;
+  width: 100vw;
 }
 
+h2 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  color:black;
+}
+
+h3 {
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+}
+/*sandra background*/
 
 /*Final tavern page content start */
 
-.final-tavern-container{
-  display: flex;
-  height: 90vh;
-  width: 95vw; 
-  justify-content: space-around;
-}
-.tavern-image{
-  display: flex;
+.final-tavern-container {
+  background-image: url(assets/tavernMobi.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
   height: 100%;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr) repeat(6, 2fr);
 }
-.tavern-description{
-  display: flex;
-  height: 50%;
-  width: 100%;
+.tavern-title{
+  font-size: 2rem;
+  color: white;
+  grid-column: 1 / 6;
+  grid-row: 1 / 3;
+}
+
+.tavern-description {
+  grid-column: 5 / 9;
+  grid-row: 4/ 11;
+  font-size: 1rem;
 }
 
 /*final tavern page content end*/
 /*start of shifumi properties*/
-#paper{
+#paper {
   background-image: url(assets/playerPaper.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-#rock{
+#rock {
   background-image: url(assets/playerRock.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-#scissors{
+#scissors {
   background-image: url(assets/playerScissors.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.challenge{
-  display: none;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
+.challenge {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr) repeat(6, 2fr);
 }
-.challenge-message{
-  display: flex;
+.bubble-sandra {
+  background-image: url(assets/bullemobiRight.png);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: transparent;
+  grid-column: 1 / 10;
+  grid-row: 1 / 9;
+  z-index: 1;
 }
-.start-challenge{
-  display: flex;
+.avatar-sandra {
+  background-image: url(assets/avatarSandra.png);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: transparent;
+  grid-column: 1 / 10;
+  grid-row: 7 / 13;
+  z-index: 0;
 }
-.skip-challenge{
-  display: flex;
-} 
-.skip-message-container{
-  display: flex;
-  height: 90vh;
-  width: 95vw; 
-  justify-content: space-around;
+
+.challenge-message {
+  grid-row: 2 / 5;
+  grid-column: 2 / 9;
+  z-index: 3;
+  padding-top: 0;
+}
+
+.start-challenge {
+  grid-row: 6 / 7;
+  grid-column: 7 / 9;
+  z-index: 4;
+  border-radius: 15%;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+}
+.skip-challenge {
+  grid-row: 6 / 7;
+  grid-column: 4 / 6;
+  z-index: 4;
+  border-radius: 15%;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
+  }
+
+.skip-message-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr) repeat(6, 2fr);
 }
 .skip-message {
-  display: flex;
+  grid-row: 2 / 5;
+  grid-column: 2 / 9;
+  z-index: 3;
+  padding-top: 5%;
 }
-.wait-please{
-  display: flex;
+.wait-please {
+  grid-row: 5 / 6;
+  grid-column: 2 / 9;
+  z-index: 3;
 }
-.coffee-timer{
-  display:flex;
+.coffee-timer {
+  grid-row: 6 / 8;
+  grid-column: 5 / 7;
+  z-index: 3;
 }
-
+.shifumi-loop-container{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.choose-your-sign-container{
+  grid-column: 1 / 10;
+  grid-row: 1 / 2;
+  display: grid;
+}
+.choose-your-sign{
+  color: #f45c45;
+}
 .sandra-tag-score {
-  background-image: url(assets/scoreBoarLeft.png);
-  border-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
+  grid-column: 1 / 10;
+  grid-row: 2 / 5;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
 }
-
-.player-tag-score {
+.sandra-name-tag{
+  grid-column: 1 / 3;
+  color: white;
+  font-size: 2rem;
+  padding-left: 5%;
+  padding-top: 10%;
+}
+.sandra-score-board{
+  grid-row: 1/2;
+  grid-column: 3/4;
   background-image: url(assets/scoreBoardRight.png);
-  border-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
-
-}
-
-
-.player-choice-container {
-  background-image: url(assets/woodenSign.png);
-  border-color: transparent;
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border: transparent;
+  z-index: 0;
+}
+.sandra-score{
+  grid-row: 1/2;
+  grid-column: 3 / 4;
+  color: white;
+  font-size: 2rem;
+  z-index: 1;
+  padding-top: 12%;
+}
+.player-tag-score {
+  grid-column: 1 / 10;
+  grid-row: 8 / 11;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+}
+.player-name-tag{
+  grid-column: 2 / 4;
+  color: white;
+  font-size: 2rem;
+  padding-left: 5%;
+  padding-top: 10%;
+  
+}
+.player-score-board{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-image: url(assets/scoreBoarLeft.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: transparent;
+    z-index: 0;
+}
+.player-score{
+  grid-row: 1/2;
+  grid-column: 1 / 2;
+  color: white;
+  font-size: 2rem;
+  z-index: 1;
+  padding-top: 12%;
+}
+.player-choice-container {
+  grid-column: 1 / 10;
+  grid-row: 5 / 8;
   display: flex;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.player-choice{
-  width:20%;
-  height: 90%;
+.player-choice {
+  width: 30%;
+  height: 100%;
   border-color: transparent;
   background-color: transparent;
 }
-.combat-message-container{
-  background-image: url(assets/woodenSign.png);
-  border-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.combat-message-container {
+  grid-column: 1 / 10;
+  grid-row: 5 / 8;
   display: flex;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .shi {
   display: flex;
-} 
+  color: white;
+  font-size: 2rem;
+}
 
 .fu {
   display: flex;
-  
+  color: white;
+  font-size: 2rem;
 }
 
 .mi {
   display: flex;
-  
+  color: white;
+  font-size: 2rem;
 }
 
-.sandra-hand-animation{
+.sandra-hand-animation {
   background-image: url(assets/sandraRockColored.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
   border-color: transparent;
-  width:20%;
-  height: 90%;
+  width: 30%;
+  height: 100%;
   display: flex;
 }
-.player-hand-animation{
+.player-hand-animation {
   background-image: url(assets/playerRock.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
   border-color: transparent;
-  width:20%;
-  height: 90%;
+  width: 30%;
+  height: 100%;
   display: flex;
-}  
+}
 
 .try-victory-message-container {
-  background-image: url(assets/woodenSign.png);
-  border-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  grid-column: 1 / 10;
+  grid-row: 5 / 8;
   display: flex;
-  height: 30vh;
-  width: 95vw; 
-  justify-content: space-around;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
 }
-.sandra-hand{
+.sandra-hand {
   display: flex;
-  width:20%;
-  height: 50%;
+  width: 30%;
+  height: 100%;
   border-color: transparent;
   background-color: transparent;
 }
-.sandra-hand-paper{
+.sandra-hand-paper {
   background-image: url(assets/sandraPaperColored.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.sandra-hand-rock{
+.sandra-hand-rock {
   background-image: url(assets/sandraRockColored.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.sandra-hand-scissors{
+.sandra-hand-scissors {
   background-image: url(assets/sandraScissorsColored.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.player-hand{
+.player-hand {
   display: flex;
-  width:20%;
-  height: 50%;
+  width: 30%;
+  height: 100%;
   border-color: transparent;
   background-color: transparent;
 }
-.player-hand-paper{
+.player-hand-paper {
   background-image: url(assets/playerPaper.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.player-hand-rock{
+.player-hand-rock {
   background-image: url(assets/playerRock.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.player-hand-scissors{
+.player-hand-scissors {
   background-image: url(assets/playerScissors.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+.who-wins{
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.end-game-container{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
 .game-victory-message-container {
+  grid-column: 1/10;
+  grid-row:1/8;
+  display: grid;
+  grid-template-rows:  repeat(5, 1fr);
+}
+.tavern-sign{
+  grid-column: 1/10;
+  grid-row: 1/5 ;
   background-image: url(assets/tavernSign.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  height: 60vh;
-  width: 95vw; 
-  justify-content: space-around;
-}
-.who-won{
-  display: flex;
-  height: 50%;
-  width: 90%;
-  border-color: transparent;
   background-color: transparent;
+  z-index: 0;
+  display: none;
+}
+.final-game-victory-message{
+  grid-row: 1/2;
+  color: white;
+  z-index: 1;
+  padding-left:10%; 
 }
 
-.who-won-sandra{
+.who-won {
+  grid-column: 1 / 10;
+  grid-row: 2 / 6;
+  border-color: transparent;
+  background-color: transparent;
+  z-index: 2;
+  width: 100%;
+}
+
+.who-won-sandra {
   background-image: url(assets/crownSandra.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border-color: transparent;
+  background-color: transparent;
+
 }
-.who-won-player{
+.who-won-player {
   background-image: url(assets/crownPlayer.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border-color: transparent;
+  background-color: transparent;
 }
-.retry-message-container{
-  display: flex;
+.retry-message-container {
+  grid-column: 1 / 10;
+  grid-row: 8 / 10;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-.retry-challenge-message{
-  display: flex;
+.retry-message{
+  grid-row: 1 / 2;
+  grid-column: 1 / 5;
+  color: white;
 }
-.retry-challenge{
-  display: flex;
+
+.retry-challenge {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4 ;
+  border-radius: 15%;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
 }
-.skip-retry-challenge{
-  display: flex;
+.skip-retry-challenge {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  border-radius: 15%;
+  font-family: "Uncial Antiqua", Georgia, "Times New Roman", Times, serif;
 }
-.slide-in{
-  animation-duration: 750ms;
-  animation-name: slidein;
-}
-.open{
-  display: flex;
-}
-.hide{
+
+.hide {
   display: none;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 
 /*end of shifumi properties*/
 
 /*footer tete pierre*/
+
 footer {
   position: sticky;
   bottom: 0;
@@ -345,17 +475,18 @@ nav {
 
 .nav-pierre {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   background-image: url(assets/bullefootermobi.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  width: 42vw;
+  width: 70vw;
   max-height: 130px;
   color: black;
   display: none;
   text-align: right;
   padding-inline-end: 2vw;
+  padding-block-start: 8px;
   
 }
 
@@ -367,8 +498,7 @@ nav {
   color: white;
   border-radius: 3px;
   text-decoration: none;
-  
-  
+   
 }
 
 .active {
@@ -378,6 +508,8 @@ nav {
 .floating-head {
   background-color: transparent;
   border: none;
-  height: 20vh;
+  
+   
 }
+
 /*footer tete pierre*/

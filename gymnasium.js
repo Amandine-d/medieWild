@@ -1,4 +1,4 @@
-*Start: 1 bouton
+/* Start: 1 bouton
 1ere question: Changer le fond ou les boutons si la reponse est correcte ou fausse
 2eme question: reset
 Compter le nombre de reponses justes 
@@ -252,6 +252,50 @@ const questions = [
   }
   ]
 
+  const cyriac = new Audio('assets/cyriac.mp3');
+  const amandine = new Audio('assets/amandine.mp3');
+  const peter = new Audio('assets/peter.mp3');
+  const fanny= new Audio('assets/fanny.mp3');
+  const sidney= new Audio('assets/sidney.mp3');
+  const florian= new Audio('assets/florian.mp3');
+  const ghislain= new Audio('assets/ghislain.mp3');
+  const nicolas= new Audio('assets/nicolas.mp3');
+  const greg= new Audio('assets/greg.mp3');
+  const enzo= new Audio('assets/enzo.mp3');
+  const paco= new Audio('assets/paco.mp3');
+  const eddy= new Audio('assets/eddy.mp3');
+  const davy= new Audio('assets/davy.mp3');
+  
+
+  function catchphrase(person) {
+      if(person == 'amandine') {
+          amandine.play();
+      } else if(person == 'cyriac') {
+        cyriac.play();
+      } else if(person == 'peter') {
+        peter.play();
+      } else if(person == 'fanny') {
+        fanny.play();
+      } else if(person == 'sidney') {
+        sidney.play();
+      } else if (person == 'florian') {
+        florian.play();
+      } else if (person == 'ghislain') {
+        ghislain.play();
+      } else if (person == 'nicolas') {
+        nicolas.play();
+      } else if (person == 'greg') {
+        greg.play();
+      } else if (person == 'enzo') {
+        enzo.play();
+      } else if (person == 'paco') {
+        paco.play();
+      } else if (person == 'eddy') {
+        eddy.play();
+      } else if (person == 'davy') {
+        davy.play();
+      }             
+    }
 
   /*footer pierre*/
 
