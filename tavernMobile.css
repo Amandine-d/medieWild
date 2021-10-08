@@ -469,21 +469,24 @@ nav {
   display: flex;
   align-content: right;
   justify-content: flex-end;
+  
 }
 
 .nav-pierre {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   background-image: url(assets/bullefootermobi.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  width: 42vw;
+  width: 70vw;
   max-height: 130px;
   color: black;
   display: none;
   text-align: right;
   padding-inline-end: 2vw;
+  padding-block-start: 8px;
+  
 }
 
 .nav-button {
@@ -494,6 +497,7 @@ nav {
   color: white;
   border-radius: 3px;
   text-decoration: none;
+   
 }
 
 .active {
@@ -503,6 +507,7 @@ nav {
 .floating-head {
   background-color: transparent;
   border: none;
-  height: 20vh;
+  
+   
 }
 /*footer tete pierre*/
