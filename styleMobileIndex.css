@@ -4,23 +4,22 @@ body {
   background: linear-gradient(to bottom right, black, rgb(69, 70, 70));
   color: white;
   min-height: 100vh;
-  min-width: 880px;
+  min-width: 100vw;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
-header {
-  background-color: #f45c45;
-  text-align: center;
-  height: 15vh;
-  display: block;
+.header {
+    display: none;
 }
 
 /*footer tete pierre*/
+
 footer {
   position: sticky;
-  bottom: 0;
+    bottom: 0;
+ 
 }
 
 nav {
@@ -30,20 +29,25 @@ nav {
   
 }
 
+a:hover{
+  background-color: gold;
+}
+
 .nav-pierre {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   background-image: url(assets/bullefootermobi.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  width: 42vw;
+  width: 70vw;
   max-height: 130px;
   color: black;
   display: none;
   text-align: right;
   padding-inline-end: 2vw;
   padding-block-start: 8px;
+  
   
 }
 
@@ -55,8 +59,7 @@ nav {
   color: white;
   border-radius: 3px;
   text-decoration: none;
-  
-  
+   
 }
 
 .active {
@@ -66,8 +69,10 @@ nav {
 .floating-head {
   background-color: transparent;
   border: none;
-  height: 20vh;
+  
+   
 }
+
 /*footer tete pierre*/
 
 /*page index*/
@@ -88,9 +93,10 @@ nav {
   grid-area: 1/1/2/13; /*row-start/column-start/row-end/column-end*/
   background-image: url(assets/blasonWild.png),
     url(assets/blasonWild.png), url(assets/blasonWild.png);
-  background-size: contain;
+  background-size: 32vh;
   background-repeat: no-repeat;
-  background-position-x: 70px, 390px, 710px;
+  background-position-x: 70px, 380px, 720px;
+  background-color: #f45c45
 }
 
 .bubble-text {
